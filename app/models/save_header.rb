@@ -1,4 +1,5 @@
 class SaveHeader < BaseData
+  include Structure
   structure(
     [:checksum_maybe, [:int8,8]],
     [:timestamp,      :time_stamp],
@@ -8,4 +9,9 @@ class SaveHeader < BaseData
     [:unknown02,      :int16],
     [:chapter,        :int16]
   )
+  
+  def disassemble(file)
+    file.seek(0)
+    super(file)
+  end
 end
