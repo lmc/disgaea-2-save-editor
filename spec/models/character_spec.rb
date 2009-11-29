@@ -53,6 +53,9 @@ describe Character do
     stats.spd.value.should equal 25808
   end
   
-  it "should extract mana"
+  it "should extract mana" do
+    disassembled.mana.should be_an_instance_of BaseData::Uint32
+    disassembled.mana.value.should equal 801740
+  end
 
 end
