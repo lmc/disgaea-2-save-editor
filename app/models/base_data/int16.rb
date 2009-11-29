@@ -2,6 +2,6 @@ class BaseData::Int16 < BaseData::Base
   def self.struct_size; 2; end
   
   def disassemble(file_data)
-    self.value = raw_from_file(file_data).unpack('c').first
+    self.value = raw_from_file(file_data).unpack('c').first #FIXME: should be unpacking as signed short
   end
 end

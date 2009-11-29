@@ -1,9 +1,10 @@
 class Characters < Array
+  START_AT = 3288
   
   def disassemble(file)
-    file.seek(3288)
+    file.seek(START_AT)
     #FIXME: Find out how many characters are stored in the save
-    1.times do
+    16.times do
       character = Character.new
       character.disassemble(file)
       self << character
