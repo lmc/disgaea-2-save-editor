@@ -7,7 +7,7 @@ class SaveHeader < BaseData
     [:name,           [:string,31]],
     [:level,          :int16],
     [:unknown02,      :int16],
-    [:chapter,        :int16]
+    [:chapter,        :int8] #HACK?: akurasu docs says int16 but mine has a mystery 03 byte after, making it 777
   )
   
   def disassemble(file)

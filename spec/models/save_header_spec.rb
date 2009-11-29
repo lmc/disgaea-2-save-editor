@@ -40,7 +40,7 @@ describe SaveHeader do
   end
   
   it "should extract chapter" do
-    disassembled.chapter.should be_an_instance_of BaseData::Int16
+    disassembled.chapter.should be_an_instance_of BaseData::Int8
     disassembled.chapter.value.should equal 9
   end
 end

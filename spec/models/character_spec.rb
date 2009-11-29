@@ -57,5 +57,15 @@ describe Character do
     disassembled.mana.should be_an_instance_of BaseData::Uint32
     disassembled.mana.value.should equal 801740
   end
+  
+  it "should extract total felonies" do
+    disassembled.felonies_total.should be_an_instance_of BaseData::Int16
+    disassembled.felonies_total.value.should equal 133
+  end
+  
+  it "should extract displayed felonies" do
+    disassembled.felonies_displayed.should be_an_instance_of BaseData::Int16
+    disassembled.felonies_displayed.value.should equal 99
+  end
 
 end
