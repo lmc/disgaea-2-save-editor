@@ -2,4 +2,7 @@ Disgaea 2 Save Editor
 Code for editing decrypted Disgaea 2 PSP save games.
 (c) Copyright Luke Mcildoon 2009, licenced under the MIT licence.
 
+Lots of love to the guys here who already documented quite a bit of the PS2 save format:
+http://akurasu.net/wiki/index.php?title=Makai_Senki_Disgaea_2/Save_Hacking
+
 Do note you need DECRYPTED saves, made available using the CFW plugin SGDeemer. Saves from an unmodified PSP will not work. I'm planning to add encryption/decryption code later, but for now you'll have to do it yourself.
