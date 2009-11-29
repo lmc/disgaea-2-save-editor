@@ -12,13 +12,17 @@ describe Character do
     @disassembled
   end
   
+  def stats
+    disassembled.stats
+  end
+  
   it "should disassemble" do
     disassembled.should be_an_instance_of Character
   end
   
   it "should extract experience" do
-    disassembled.experience.should be_an_instance_of BaseData::Uint32
-    disassembled.experience.value.should equal 1469552283
+    disassembled.experience.should be_an_instance_of BaseData::Uint64
+    disassembled.experience.value.should == 1469552283
   end
   
   it "should extract items"
@@ -37,7 +41,17 @@ describe Character do
   
   it "should extract current SP"
   
-  it "should extract stats"
+  it "should extract stats" do
+    stats.should be_an_instance_of Stats
+    stats.hp.value.should equal 77142
+    stats.sp.value.should equal 16053
+    stats.atk.value.should equal 60494
+    stats.def.value.should equal 19316
+    stats.int.value.should equal 17494
+    stats.res.value.should equal 13795
+    stats.hit.value.should equal 22134
+    stats.spd.value.should equal 25808
+  end
   
   it "should extract mana"
 
