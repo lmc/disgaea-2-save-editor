@@ -34,7 +34,11 @@ module Structure
   module ClassMethods
 
     def class_from_symbol(symbol)
-      "BaseData::#{symbol.to_s.classify}".constantize
+      if symbol.is_a?(Symbol)
+        "BaseData::#{symbol.to_s.classify}".constantize
+      else
+        symbol
+      end
     end
   end
   

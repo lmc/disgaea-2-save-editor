@@ -1,14 +1,16 @@
 class Character < BaseData
   include Structure
-  #each character is 3,072 bytes
+  SIZE = 3072
   
   structure(
-    [:experience,     :uint32]
+    [:experience,     :uint64],
+    [:unknown,        [:int8,2512]],
+    [:stats,          Stats]
   )
   
   def disassemble(file)
     returning super(file) do
-      (3072 - 4).times { file.read(1) }
+      (SIZE - 4).times { file.read(1) }
     end
   end
 end
