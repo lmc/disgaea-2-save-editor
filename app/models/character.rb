@@ -7,9 +7,8 @@ class Character < BaseData
     [:unknown01,          [:int8,2512]],
     [:stats,              Stats],
     [:base_stats_maybe,   Stats],
-    [:unknown02,          [:int32,8]],
+    [:unknown02,          [:int8,32]],
     [:mana,               :uint32],
-    #[:unknown03,          [:int8,456]]
     [:unknown03,          [:int8,78]],
     [:felonies_total,     Int16],
     [:felonies_displayed, Int16],
