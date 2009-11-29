@@ -32,9 +32,13 @@ class BaseData
   def disassemble(file)
     @@struct_order.each do |struct_name|
       klass,count = *@@structs[struct_name]
-      value = klass.new
-      value.disassemble(file)
-      self.struct_values[struct_name] = value
+      values = []
+      count.times do
+        value = klass.new
+        value.disassemble(file)
+        values << value
+      end
+      self.struct_values[struct_name] = values
     end
     self
   end

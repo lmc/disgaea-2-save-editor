@@ -16,4 +16,12 @@ class BaseData::Base
     file_object.read(self.class.struct_size)
   end
   
+  def inspect
+    "#<D2 #{self.class.name.demodulize} #{inspect_value}>"
+  end
+  
+  def inspect_value
+    self.value
+  end
+  
 end
