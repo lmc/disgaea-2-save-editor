@@ -5,6 +5,10 @@ class BaseData
     self.struct_values = {}
   end
   
+  def comp_values
+    struct_values.map { |key,value| [key,value.value] }
+  end
+  
   def disassemble(file)
     self.class.struct_order.each do |struct_name|
       klass,count = *self.class.structs[struct_name]
