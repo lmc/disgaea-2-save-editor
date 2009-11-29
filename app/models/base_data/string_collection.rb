@@ -1,5 +1,20 @@
 class BaseData::StringCollection < BaseData::Base
-  def value
-    
+  attr_accessor :strings
+  delegate :size, :to => :strings
+  
+  def initialize(strings = [])
+    self.strings = strings
   end
+  
+  def value
+    strings.map(&:value).join
+  end
+  
+  def value=(new_value)
+    strings.each_with_index do |string,index|
+      string.value = index > new_value.size ? 0.chr : new_value[index,1]
+    end
+    value
+  end
+  
 end

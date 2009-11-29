@@ -48,6 +48,9 @@ class BaseData
         value.disassemble(file)
         values << value
       end
+      if klass == BaseData::String
+        values = BaseData::StringCollection.new(values)
+      end
     else
       values = klass.new
       values.disassemble(file)

@@ -28,7 +28,11 @@ describe SaveHeader do
     disassembled.timestamp.seconds.should equal 33
   end
   
-  it "should extract name"
+  it "should extract name" do
+    disassembled.name.should be_an_instance_of BaseData::StringCollection
+    disassembled.name.size.should equal 31
+    #disassembled.name.value.strip.should equal 'Adell' #FIXME: wtf, equal? fails
+  end
   
   it "should extract level" do
     disassembled.level.should be_an_instance_of BaseData::Int16
