@@ -1,4 +1,4 @@
-class SaveHeader
+class SaveHeader < BaseData
   structure(
     [:checksum_maybe, [:int8,8]],
     [:timestamp,      :time_stamp],
