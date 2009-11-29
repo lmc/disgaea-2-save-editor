@@ -1,0 +1,3 @@
+class BaseData::Base
+  
+end
