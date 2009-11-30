@@ -1,4 +1,5 @@
 #Some strings are stored as plain-text, others are in this weird offset form @__@
+require 'base_data/string' #HACK: Stop ruby getting confused and thinking we want ::String
 class BaseData::DisgaeaString < BaseData::String
   TRANSLATIONS = {
     64  => ' ',
@@ -24,8 +25,5 @@ class BaseData::DisgaeaString < BaseData::String
     end.join
   end
   
-  def disassemble(file_data)
-    super
-    self.value = self.class.translate(self.value)
-  end
+  
 end

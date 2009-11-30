@@ -33,6 +33,8 @@ class BaseData
         values = BaseData::StringCollection.new(values)
       elsif klass == BaseData::Unknown
         values = BaseData::UnknownCollection.new(values)
+      elsif klass == BaseData::DisgaeaString
+        values = BaseData::DisgaeaStringCollection.new(values)
       end
     else
       values = klass.new
