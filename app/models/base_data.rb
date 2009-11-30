@@ -31,6 +31,8 @@ class BaseData
       end
       if klass == BaseData::String
         values = BaseData::StringCollection.new(values)
+      elsif klass == BaseData::Unknown
+        values = BaseData::UnknownCollection.new(values)
       end
     else
       values = klass.new
