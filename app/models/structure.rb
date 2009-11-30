@@ -17,11 +17,22 @@ module Structure
           struct[0] = class_from_symbol(struct[0])
           self.struct_order << name
           self.structs[name] = struct
-          define_method("#{name}") do
+          define_method("#{name}_struct") do
             self.struct_values[name]
           end
-          define_method("#{name}=") do |new_value|
+          define_method("#{name}_struct=") do |new_value|
             self.struct_values[name] = new_value
+          end
+          define_method("#{name}") do
+            struct = self.struct_values[name]
+            struct.respond_to?(:value) ? struct.value : struct
+          end
+          define_method("#{name}=") do |new_value|
+            if self.struct_values[name].respond_to?(:value)
+              self.struct_values[name].value = new_value
+            else
+              self.struct_values[name] = new_value
+            end
           end
         end
       end

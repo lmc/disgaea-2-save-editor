@@ -1,1 +1,719 @@
 # Logfile created on Mon Nov 30 03:12:15 +1100 2009
+
+Processing SaveHeadersController#index (for ::1 at 2009-11-30 23:16:04) [GET]
+
+NoMethodError (undefined method `find' for SaveHeader:Class):
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/base_helpers.rb:23:in `collection'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:7:in `index'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:17:55) [GET]
+  Parameters: {"id"=>"mine"}
+
+NoMethodError (undefined method `find' for SaveHeader:Class):
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/base_helpers.rb:41:in `resource'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (118.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:18:27) [GET]
+  Parameters: {"id"=>"mine"}
+
+NoMethodError (undefined method `find' for SaveHeader:Class):
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/base_helpers.rb:41:in `resource'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:18:33) [GET]
+  Parameters: {"id"=>"mine"}
+
+NoMethodError (undefined method `find' for SaveHeader:Class):
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/base_helpers.rb:41:in `resource'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (101.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:21:46) [GET]
+  Parameters: {"id"=>"mine"}
+
+Errno::ENOENT (No such file or directory - /Users/luke/Sites/disgaea-2-save-editordata/saves/ULUS10461DISGAEA000/SDDATA.BIN):
+  app/controllers/application_controller.rb:12:in `initialize'
+  app/controllers/application_controller.rb:12:in `open'
+  app/controllers/application_controller.rb:12:in `current_save'
+  app/controllers/save_headers_controller.rb:8:in `resource'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:21:56) [GET]
+  Parameters: {"id"=>"mine"}
+
+NoMethodError (undefined method `decompile' for #<Save:0x1149e88>):
+  app/controllers/save_headers_controller.rb:8:in `resource'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:22:12) [GET]
+  Parameters: {"id"=>"mine"}
+
+TypeError (can't convert File into String):
+  app/models/save.rb:13:in `initialize'
+  app/models/save.rb:13:in `open'
+  app/models/save.rb:13:in `open'
+  app/models/save.rb:17:in `disassemble'
+  app/controllers/save_headers_controller.rb:8:in `resource'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:22:51) [GET]
+  Parameters: {"id"=>"mine"}
+
+ActionView::MissingTemplate (Missing template save_headers/show.erb in view path app/views):
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#show (for ::1 at 2009-11-30 23:29:53) [GET]
+  Parameters: {"id"=>"mine"}
+
+ActionView::MissingTemplate (Missing template save_headers/show.erb in view path app/views):
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+  /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:13:in `show'
+  haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for ::1 at 2009-11-30 23:30:00) [GET]
+
+ActionController::RoutingError (No route matches "/save_headers/edit/mine" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SaveHeadersController#edit (for ::1 at 2009-11-30 23:30:10) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+ERROR: compiling _run_haml_app47views47save_headers47edit46html46haml RAISED compile error
+/Users/luke/Sites/disgaea-2-save-editor/app/views/save_headers/edit.html.haml:8: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_haml_app47views47save_headers47edit46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:escape_html=>false, :encoding=>nil, :format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre", "code"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+_hamlout.push_text("<h1>Save header:</h1>\n", 0, false); semantic_form_for @save_header do |f|;
+ f.inputs do;
+_hamlout.push_text("#{haml_temp =  f.input :name
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);end; f.buttons;
+_hamlout.push_text("#{haml_temp =  f.commit_button
+_hamlout.format_script_false_false_false_false_false_true_false((haml_very_temp = haml_temp; haml_temp = nil; haml_very_temp));}\n", 0, false);end;end;_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/luke/Sites/disgaea-2-save-editor/app/views/save_headers/edit.html.haml:8:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/opt/local/lib/ruby/gems/1.8/gems/haml-2.2.14/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+/Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/opt/local/lib/ruby/gems/1.8/gems/haml-2.2.14/lib/sass/plugin/rails.rb:19:in `process_without_compass'
+/Users/luke/Sites/disgaea-2-save-editor/vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/luke/Sites/disgaea-2-save-editor/app/views/save_headers/edit.html.haml:8: syntax error, unexpected kENSURE, expecting $end) on line #8 of app/views/save_headers/edit.html.haml:
+5:   - f.buttons
+6:     = f.commit_button
+
+    app/views/save_headers/edit.html.haml:8:in `compile!'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for ::1 at 2009-11-30 23:30:21) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x3421f64>) on line #2 of app/views/save_headers/edit.html.haml:
+1: %h1 Save header:
+2: - semantic_form_for @save_header do |f|
+3:   - f.inputs do
+4:     = f.input :name
+5:   - f.buttons do
+
+    app/views/save_headers/edit.html.haml:2:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:32:43) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #2 of app/views/save_headers/edit.html.haml:
+1: %h1 Save header:
+2: - semantic_form_for @save_header do |f|
+3:   - f.inputs do
+4:     = f.input :name
+5:   - f.buttons do
+
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1515:in `semantic_form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1474:in `with_custom_field_error_proc'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1514:in `semantic_form_for'
+    app/views/save_headers/edit.html.haml:2:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.5ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:33:00) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/save_headers/edit.html.haml:
+1: %h1 Save header:
+2: - debugger
+3: - semantic_form_for @save_header do |f|
+4:   - f.inputs do
+5:     = f.input :name
+6:   - f.buttons do
+
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1515:in `semantic_form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1474:in `with_custom_field_error_proc'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1514:in `semantic_form_for'
+    app/views/save_headers/edit.html.haml:3:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:33:15) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/save_headers/edit.html.haml:
+1: %h1 Save header:
+2: - debugger
+3: - semantic_form_for @save_header do |f|
+4:   - f.inputs do
+5:     = f.input :name
+6:   - f.buttons do
+
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1515:in `semantic_form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1474:in `with_custom_field_error_proc'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1514:in `semantic_form_for'
+    app/views/save_headers/edit.html.haml:3:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.3ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:33:24) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/save_headers/edit.html.haml:
+1: %h1 Save header:
+2: - debugger
+3: - semantic_form_for @save_header do |f|
+4:   - f.inputs do
+5:     = f.input :name
+6:   - f.buttons do
+
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1515:in `semantic_form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1474:in `with_custom_field_error_proc'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1514:in `semantic_form_for'
+    app/views/save_headers/edit.html.haml:3:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:36:49) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+ActionView::TemplateError (undefined method `new_record?' for #<SaveHeader:0x26c60a4>) on line #6 of app/views/save_headers/edit.html.haml:
+3:   - f.inputs do
+4:     = f.input :name
+5:   - f.buttons do
+6:     = f.commit_button
+
+    formtastic (0.9.4) rails/./lib/formtastic.rb:316:in `commit_button'
+    app/views/save_headers/edit.html.haml:6:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers.rb:322:in `call'
+    haml (2.2.14) lib/haml/helpers.rb:322:in `capture_haml'
+    haml (2.2.14) lib/haml/helpers.rb:523:in `with_haml_buffer'
+    haml (2.2.14) lib/haml/helpers.rb:318:in `capture_haml'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1136:in `field_set_and_list_wrapping'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:287:in `buttons'
+    app/views/save_headers/edit.html.haml:5:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.14) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.14) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1515:in `semantic_form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1474:in `with_custom_field_error_proc'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1514:in `semantic_form_for'
+    app/views/save_headers/edit.html.haml:2:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.3ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:37:35) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+
+ActionView::TemplateError (undefined method `human_name' for SaveHeader:Class) on line #6 of app/views/save_headers/edit.html.haml:
+3:   - f.inputs do
+4:     = f.input :name
+5:   - f.buttons do
+6:     = f.commit_button
+
+    formtastic (0.9.4) rails/./lib/formtastic.rb:317:in `commit_button'
+    app/views/save_headers/edit.html.haml:6:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers.rb:322:in `call'
+    haml (2.2.14) lib/haml/helpers.rb:322:in `capture_haml'
+    haml (2.2.14) lib/haml/helpers.rb:523:in `with_haml_buffer'
+    haml (2.2.14) lib/haml/helpers.rb:318:in `capture_haml'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1136:in `field_set_and_list_wrapping'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:287:in `buttons'
+    app/views/save_headers/edit.html.haml:5:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.14) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.14) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1515:in `semantic_form_for'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1474:in `with_custom_field_error_proc'
+    formtastic (0.9.4) rails/./lib/formtastic.rb:1514:in `semantic_form_for'
+    app/views/save_headers/edit.html.haml:2:in `_run_haml_app47views47save_headers47edit46html46haml'
+    haml (2.2.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:107:in `retrieve_response_from_mimes'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:163:in `default_render'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:113:in `to_html'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `send'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/responder.rb:106:in `call'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/legacy/respond_to.rb:65:in `respond_with'
+    /Users/luke/.gem/ruby/1.8/gems/inherited_resources-0.9.3/lib/inherited_resources/actions.rb:25:in `edit'
+    haml (2.2.14) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    vendor/gems/chriseppstein-compass-0.8.17/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:38:56) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+Completed in 452ms (View: 7 | 200 OK [http://localhost/save_headers/mine/edit]
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-11-30 23:56:57) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+Completed in 718ms (View: 316 | 200 OK [http://localhost/save_headers/mine/edit]
+
+
+Processing SaveHeadersController#edit (for 127.0.0.1 at 2009-12-01 00:15:49) [GET]
+  Parameters: {"id"=>"mine"}
+Rendering save_headers/edit
+Completed in 413ms (View: 6 | 200 OK [http://localhost/save_headers/mine/edit]

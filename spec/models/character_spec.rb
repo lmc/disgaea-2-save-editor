@@ -12,17 +12,13 @@ describe Character do
     @disassembled
   end
   
-  def stats
-    disassembled.stats
-  end
-  
   it "should disassemble" do
     disassembled.should be_an_instance_of Character
   end
   
   it "should extract experience" do
-    disassembled.experience.should be_an_instance_of BaseData::Uint64
-    disassembled.experience.value.should == 1469552283
+    disassembled.experience_struct.should be_an_instance_of BaseData::Uint64
+    disassembled.experience.should == 1469552283
   end
   
   it "should extract items"
@@ -42,30 +38,30 @@ describe Character do
   it "should extract current SP"
   
   it "should extract stats" do
-    stats.should be_an_instance_of Stats
-    stats.hp.value.should equal 77142
-    stats.sp.value.should equal 16053
-    stats.atk.value.should equal 60494
-    stats.def.value.should equal 19316
-    stats.int.value.should equal 17494
-    stats.res.value.should equal 13795
-    stats.hit.value.should equal 22134
-    stats.spd.value.should equal 25808
+    disassembled.stats_struct.should be_an_instance_of Stats
+    disassembled.stats.hp.should equal 77142
+    disassembled.stats.sp.should equal 16053
+    disassembled.stats.atk.should equal 60494
+    disassembled.stats.def.should equal 19316
+    disassembled.stats.int.should equal 17494
+    disassembled.stats.res.should equal 13795
+    disassembled.stats.hit.should equal 22134
+    disassembled.stats.spd.should equal 25808
   end
   
   it "should extract mana" do
-    disassembled.mana.should be_an_instance_of BaseData::Uint32
-    disassembled.mana.value.should equal 801740
+    disassembled.mana_struct.should be_an_instance_of BaseData::Uint32
+    disassembled.mana.should equal 801740
   end
   
   it "should extract total felonies" do
-    disassembled.felonies_total.should be_an_instance_of BaseData::Int16
-    disassembled.felonies_total.value.should equal 133
+    disassembled.felonies_total_struct.should be_an_instance_of BaseData::Int16
+    disassembled.felonies_total.should equal 133
   end
   
   it "should extract displayed felonies" do
-    disassembled.felonies_displayed.should be_an_instance_of BaseData::Int16
-    disassembled.felonies_displayed.value.should equal 99
+    disassembled.felonies_displayed_struct.should be_an_instance_of BaseData::Int16
+    disassembled.felonies_displayed.should equal 99
   end
 
 end

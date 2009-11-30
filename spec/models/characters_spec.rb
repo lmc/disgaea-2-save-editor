@@ -19,8 +19,8 @@ describe Characters do
   
   #lets just check 1st/2nd character's experience as a sanity check here
   it "should disassemble correctly" do
-    disassembled.first.experience.value.should == 1469552283
-    disassembled.second.experience.value.should == 978368200
+    disassembled.first.experience.should == 1469552283
+    disassembled.second.experience.should == 978368200
   end
   
 end
