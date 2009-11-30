@@ -1,5 +1,5 @@
 class SaveHeadersController < InheritedResources::Base
-  actions :show, :edit, :update
+  actions :edit, :update
   
   
   protected
