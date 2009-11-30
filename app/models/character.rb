@@ -4,8 +4,7 @@ class Character < BaseData
   
   structure(
     [:experience,         :uint64],
-    #[:unknown01,          [:unknown,2512]],
-    [:unknown01,          [:unknown,1024]],
+    [:items,              CharacterItems],
     [:name,               [:disgaea_string,41]],
     [:class_name,         [:string,61]],
     [:tunknown,           [:unknown,1382]],

@@ -1,17 +1,10 @@
 class Item < BaseData
   include Structure
   
-  #structure(
-  #  [:specialists,    [Specialist,10]],
-  #  [:stats,          Stats],
-  #  [:base_stats,     Stats],
-  #  [:type,           :int16],
-  #  [:level,          :int16]
-  #)
+  structure(
+    [:unknown01,    [:unknown,184]],
+    [:name,         [:string,33]],
+    [:unknown02,    [:unknown,39]]
+  )
   
-  def disassemble(file)
-    returning super(file) do
-      (SIZE - 4).times { file.read(1) }
-    end
-  end
 end

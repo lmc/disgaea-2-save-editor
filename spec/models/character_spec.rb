@@ -21,7 +21,13 @@ describe Character do
     disassembled.experience.should == 1469552283
   end
   
-  it "should extract items"
+  it "should extract items" do
+    disassembled.should have(4).items
+    disassembled.items[0].name.strip.should == 'Balmung'
+    disassembled.items[1].name.strip.should == 'Arcadia'
+    disassembled.items[2].name.strip.should == "Angel's Sandals"
+    disassembled.items[3].name.strip.should == "Felicitation"
+  end
   
   it "should extract character name" do
     disassembled.name_struct.should be_an_instance_of BaseData::DisgaeaStringCollection

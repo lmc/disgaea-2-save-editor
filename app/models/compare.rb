@@ -9,7 +9,7 @@ class Compare
     block ||= proc { |u1,u2,idx| "#{idx}:\t#{u1}\t#{u2}" }
     
     options.reverse_merge!(
-      :skip_unless => proc { |u1,u2,idx| false }
+      :skip_unless => proc { |u1,u2,idx| true }
     )
     
     [values1.size,values2.size].max.times do |line|

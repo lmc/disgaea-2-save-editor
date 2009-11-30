@@ -1,6 +1,6 @@
 class BaseData::StringCollection < BaseData::Base
   attr_accessor :strings
-  delegate :size, :to => :strings
+  delegate :[],:size, :to => :strings
   
   def initialize(strings = [])
     self.strings = strings
