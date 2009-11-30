@@ -4,7 +4,10 @@ class Character < BaseData
   
   structure(
     [:experience,         :uint64],
-    [:unknown01,          [:unknown,2512]],
+    #[:unknown01,          [:unknown,2512]],
+    [:unknown01,          [:unknown,1024]],
+    [:name,               [:string,41]],
+    [:tunknown,           [:unknown,1443]],
     [:stats,              Stats],
     [:base_stats_maybe,   Stats],
     [:unknown02,          [:unknown,32]],
