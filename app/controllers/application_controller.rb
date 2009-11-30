@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  def current_save
+    @file = RAILS_ROOT+'/data/saves/ULUS10461DISGAEA000/SDDATA.BIN'
+    @current_save ||= Save.new(@file)
+  end
+  
 end

@@ -1,4 +1,5 @@
 class BaseData
+  include FakeActiveRecord
   attr_accessor :struct_values
 
   def initialize
