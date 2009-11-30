@@ -13,4 +13,17 @@ class Specialist < BaseData
     [:class_id,  :uint16],
     [:name_id,   :uint16]
   )
+  
+  CLASS_IDS = {
+    2    => 'Master',
+    3    => 'Gladiator',
+    5    => 'Tutor',
+    6    => 'Coach',
+    8    => 'Physician',
+    21   => 'Alchemist',
+    46   => 'Firefighter',
+    63   => 'Manager',
+    1118 => 'Rune Knight Lover',
+    1119 => 'Female Samurai Lover',
+  }
 end

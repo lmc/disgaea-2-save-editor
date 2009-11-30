@@ -27,6 +27,9 @@ describe Character do
     disassembled.items[1].name.strip.should == 'Arcadia'
     disassembled.items[2].name.strip.should == "Angel's Sandals"
     disassembled.items[3].name.strip.should == "Felicitation"
+    
+    #TODO: Put these in own spec
+    
   end
   
   it "should extract character name" do
