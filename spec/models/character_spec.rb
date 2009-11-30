@@ -23,9 +23,20 @@ describe Character do
   
   it "should extract items"
   
-  it "should extract character name"
+  it "should extract character name" do
+    disassembled.name_struct.should be_an_instance_of BaseData::DisgaeaStringCollection
+    disassembled.name_struct.size.should equal 41
+    disassembled.name.strip.should == 'Kyoko'
+  end
   
-  it "should extract class name"
+  it "should extract class name" do
+    disassembled.class_name_struct.should be_an_instance_of BaseData::StringCollection
+    disassembled.class_name_struct.size.should equal 61
+    #MYSTERY: Most specs say it should be 61 character longs, but I have a 0E just chilling in the middle of my string
+    #"Exorcist\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000
+    #\000\016\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+    #disassembled.class_name.strip.should == 'Exorcist'
+  end
   
   it "should extract resistances"
   
