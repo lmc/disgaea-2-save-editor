@@ -2,7 +2,8 @@ class Item < BaseData
   include Structure
   
   structure(
-    [:unknown01,    [:unknown,184]],
+    [:specialists,  Specialists],
+    [:unknown01,    [:unknown,120]],
     [:name,         [:string,33]],
     [:unknown02,    [:unknown,39]]
   )

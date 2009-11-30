@@ -15,7 +15,9 @@ class BaseData::UnknownCollection < BaseData::StringCollection
   end
   
   def as_int16(offset = 0)
-    #as_int8.in_groups_of(2)
+    as_int8.in_groups_of(2).map do |args|
+      BaseData::Int16.new.convert(args.map(&:chr).join)
+    end
   end
   
   def as_int32(offset = 0)
