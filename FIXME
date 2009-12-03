@@ -1,0 +1,2 @@
+Save.new.disassemble.characters[1].items[0].name is fucked
+Storyline characters names must come from a string table index instead of the 'name' string

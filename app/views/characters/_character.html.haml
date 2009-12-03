@@ -1,2 +1,8 @@
 %li[character]
-  = render character.stats
+  %table.character{:border => 1}
+    %tr.names
+      %td{:colspan => 1}== #{character.name} / #{character.class_name}
+    %tr
+      %td.stats= render character.stats
+      %td.items
+        %ul= render character.items

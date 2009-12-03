@@ -26,4 +26,24 @@ class Specialist < BaseData
     1118 => 'Rune Knight Lover',
     1119 => 'Female Samurai Lover',
   }
+  
+  def class_name
+    CLASS_IDS[class_id] || "Unknown #{class_id}"
+  end
+  
+  def real_level
+    if subdued?
+      (level - 10000) * 2
+    else
+      level
+    end
+  end
+  
+  def subdued?
+    level > 9999
+  end
+  
+  def inspect
+    "#<Specialist #{class_name} lvl. #{real_level} #{subdued? ? 'Subdued' : 'Unsubdued'}>"
+  end
 end
