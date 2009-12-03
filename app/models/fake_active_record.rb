@@ -11,6 +11,10 @@ module FakeActiveRecord
   end
   
   module InstanceMethods
+    def id #to shut up depreciation warnings
+      object_id
+    end
+    
     def new_record?
       false
     end

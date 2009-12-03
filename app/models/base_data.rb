@@ -1,6 +1,11 @@
 class BaseData
   include FakeActiveRecord
   attr_accessor :struct_values
+  
+  #Clean up a string for display
+  def self.clean(str)
+    str.strip
+  end
 
   def initialize
     self.struct_values = {}
