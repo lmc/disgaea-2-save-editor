@@ -15,8 +15,10 @@ class BaseData::UnknownCollection < BaseData::StringCollection
   end
   
   def as_int16(offset = 0)
-    as_int8.in_groups_of(2).map do |args|
-      BaseData::Int16.new.convert(args.map(&:chr).join)
+    int8s = as_int8
+    offset.times { int8s.shift }
+    int8s.in_groups_of(2).map do |args|
+      BaseData::Int16.new.convert(args.compact.map(&:chr).join)
     end
   end
   

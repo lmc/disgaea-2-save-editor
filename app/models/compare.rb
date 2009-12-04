@@ -1,10 +1,13 @@
 #TODO: Make this into an instance-able class, with accessor blocks for skipping, highlighting, sorting, etc.
 
-#To compare 3 character's tunknown blocks as int16s
-#  chars = Save.new.disassemble.characters
-#  comp = Compare.new(chars[0],chars[1],chars[2])
-#  comp.map = [:tunknown,:as_int16]
-#  comp.compare_string
+=begin
+To compare 3 character's tunknown blocks as int16s
+  chars = Save.new.disassemble.characters
+  comp = Compare.new(chars[0],chars[1],chars[2])
+  comp.map = [:tunknown,:as_int16]
+  comp.compare_string
+  
+=end
 class Compare
   attr_accessor :to_compare
   attr_accessor :sorter
@@ -18,10 +21,10 @@ class Compare
   
   #make this into a hash, like {:ronin => chars[0], :archer => chars[1]} and have it label columns?
   def initialize(*to_compare)
-    self.to_compare = [to_compare].flatten
+    self.to_compare = to_compare
     self.map = []
     
-    self.map += [:tunknown,:as_int16]
+    #self.map += [:tunknown,:as_int16]
   end
   
   def skip?(*args)
@@ -39,7 +42,7 @@ class Compare
   def compare
     items = to_compare
     map.each do |method|
-      items = items.map(&method)
+      items = items.map { |item| item.send(*method) }
     end
     max_count = items.map(&:size).max
     results = []

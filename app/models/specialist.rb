@@ -49,6 +49,6 @@ class Specialist < BaseData
   end
   
   def inspect
-    "#<Specialist #{class_name} lvl. #{real_level} #{subdued? ? 'Subdued' : 'Unsubdued'}>"
+    "#<Specialist #{class_name} lvl. #{level} #{subdued? ? 'Subdued' : 'Unsubdued'}>"
   end
 end
