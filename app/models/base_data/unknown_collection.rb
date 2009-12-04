@@ -23,7 +23,11 @@ class BaseData::UnknownCollection < BaseData::StringCollection
   end
   
   def as_int32(offset = 0)
-    
+    int8s = as_int8
+    offset.times { int8s.shift }
+    int8s.in_groups_of(4).map do |args|
+      BaseData::Int32.new.convert(args.compact.map(&:chr).join)
+    end
   end
   
 end

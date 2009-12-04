@@ -28,5 +28,6 @@ describe Compare do
   
   it "should compare and sort results"
   
+  it "should generate headers for each compare column"
   
 end
