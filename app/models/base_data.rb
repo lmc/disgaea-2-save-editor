@@ -19,7 +19,11 @@ class BaseData
     self.class.struct_order.each do |struct_name|
       klass,count = *self.class.structs[struct_name]
       values = parse_normal(file,klass,count)
-      self.struct_values[struct_name] = values
+      if respond_to?("#{struct_name}=")
+        self.send("#{struct_name}=",values)
+      else
+        self.struct_values[struct_name] = values
+      end
     end
     self
   end

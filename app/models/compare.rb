@@ -16,6 +16,7 @@ class Compare
   FALSE_PROC = proc { |idx,*args| false }
   DISPLAY_PROC = proc { |idx,*args| [idx,args].flatten.join("\t") }
   
+  #make this into a hash, like {:ronin => chars[0], :archer => chars[1]} and have it label columns?
   def initialize(*to_compare)
     self.to_compare = [to_compare].flatten
     self.map = []

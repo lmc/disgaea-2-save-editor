@@ -8,11 +8,28 @@ class Specialist < BaseData
   #unsubdued, level 242 == 242
   #subdued, level 242   == 10121
   structure(
-    [:level,     :uint16],
+    [:raw_level, :uint16],
     [:unknown,   :uint16],
     [:class_id,  :uint16],
     [:name_id,   :uint16]
   )
+  attr_accessor :level, :subdued
+  alias_method :subdued?, :subdued
+  
+  def raw_level
+    subdued? ? (level / 2) + 10000 : level
+  end
+  
+  def raw_level=(new_level)
+    new_level = new_level.value if new_level.respond_to?(:value)
+    if new_level > 9999
+      self.subdued = true
+      self.level = (new_level - 10000) * 2
+    else
+      self.subdued = false
+      self.level = new_level
+    end
+  end
   
   CLASS_IDS = {
     2    => 'Master',
@@ -29,18 +46,6 @@ class Specialist < BaseData
   
   def class_name
     CLASS_IDS[class_id] || "Unknown #{class_id}"
-  end
-  
-  def real_level
-    if subdued?
-      (level - 10000) * 2
-    else
-      level
-    end
-  end
-  
-  def subdued?
-    level > 9999
   end
   
   def inspect

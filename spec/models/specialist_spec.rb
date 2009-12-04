@@ -18,8 +18,8 @@ describe Specialist do
   
   it "should correctly calculate level on subdued specialists" do
     @specialist.should be_subdued
-    @specialist.level.should == 10007
-    @specialist.real_level.should == 14
+    @specialist.raw_level.should == 10007
+    @specialist.level.should == 14
   end
   
   
