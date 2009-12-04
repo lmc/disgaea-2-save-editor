@@ -13,8 +13,8 @@ class Character < BaseData
     [:unknown02,          [:unknown,32]],
     [:mana,               :uint32],
     [:unknown03,          [:unknown,78]],
-    [:felonies_total,     Int16],
-    [:felonies_displayed, Int16],
+    [:felonies_total,     :int16],
+    [:felonies_displayed, :int16],
     [:unknown04,          [:unknown,374]]
   )
 
