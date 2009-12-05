@@ -48,9 +48,9 @@ describe Item do
     @item.item_class_id.should == 233
   end
   
-  it "should extract displayed level" do
-    @item.displayed_level_struct.should be_an_instance_of BaseData::Int8
-    @item.displayed_level.should == 30
+  it "should extract level" do
+    @item.level_struct.should be_an_instance_of BaseData::Int8
+    @item.level.should == 30
   end
   
   it "should extract text colour" do
@@ -59,8 +59,13 @@ describe Item do
   end
   
   it "should extract max item world level" do
-    @item.max_item_world_level_struct.should be_an_instance_of BaseData::Int8
-    @item.max_item_world_level.should == 59
+    @item.item_world_level_max_struct.should be_an_instance_of BaseData::Int8
+    @item.item_world_level_max.should == 59
+  end
+  
+  it "should extract item world level" do
+    @item.item_world_level_struct.should be_an_instance_of BaseData::Int8
+    @item.item_world_level.should == 30
   end
   
 end

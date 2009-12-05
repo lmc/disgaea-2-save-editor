@@ -8,13 +8,12 @@ class Item < BaseData
     [:base_stats,           Stats],
     [:item_class_id,        :int16],
     [:unknown02,            [:unknown,2]],
-    [:displayed_level,      :int8],
-    [:max_item_world_level, :int8],
+    [:level,                :int8], #true, effective level
+    [:item_world_level_max, :int8],
     [:unknown03,            [:unknown,2]],
     [:text_colour,          :int8], #3 = gold, #2 = green, 1 = normal
-    #[:unknown04,            [:unknown,9]],
     [:unknown04,            [:unknown,3]],
-    [:level_something_again,:int8], #maybe how many 'true' levels? including level spheres, bonuses, etc.?
+    [:item_world_level,     :int8], #how many item world levels cleared
     [:unknown05,            [:unknown,5]],
     [:rarity,               :int8],
     [:unknown06,            [:unknown,29]],
