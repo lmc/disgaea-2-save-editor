@@ -43,4 +43,9 @@ describe Item do
     @item.rarity.should == 15
   end
   
+  it "should extract item class id" do
+    @item.item_class_id_struct.should be_an_instance_of BaseData::Int16
+    @item.item_class_id.should == 233
+  end
+  
 end

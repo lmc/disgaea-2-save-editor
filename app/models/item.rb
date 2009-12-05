@@ -6,8 +6,8 @@ class Item < BaseData
     [:unknown01,    [:unknown,8]],
     [:stats,        Stats],
     [:base_stats,   Stats],
-#    [:unknown02,    [:unknown,48]],
-    [:unknown02,    [:unknown,18]],
+    [:item_class_id,:int16],
+    [:unknown02,    [:unknown,16]],
     [:rarity,       :int8],
     [:unknown03,    [:unknown,29]],
     #FIXME?: You can rename items in the Item World, will that make this become
