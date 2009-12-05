@@ -53,4 +53,9 @@ describe Item do
     @item.displayed_level.should == 30
   end
   
+  it "should extract text colour" do
+    @item.text_colour_struct.should be_an_instance_of BaseData::Int8
+    @item.text_colour.should == 2
+  end
+  
 end
