@@ -33,5 +33,14 @@ describe Item do
     @item.stats.hit.should equal 0
     @item.stats.spd.should equal 127
   end
-
+  
+  it "should extract base stats" do
+    @item.base_stats_struct.should be_an_instance_of Stats
+  end
+  
+  it "should extract rarity" do
+    @item.rarity_struct.should be_an_instance_of BaseData::Int8
+    @item.rarity.should == 15
+  end
+  
 end
