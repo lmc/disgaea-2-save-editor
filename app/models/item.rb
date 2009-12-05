@@ -21,11 +21,16 @@ class Item < BaseData
     [:population,           :int8],
     [:mv,                   :int8],
     [:jmp,                  :int8],
-    [:unknown07,            [:unknown,24]],
+    [:unknown07,            [:unknown,1]], #item ids? string ids? identical for all "angel's sandals"
+    [:maybe_is_weapon,      :int8],
+    #[:unknown08,            [:unknown,22]],
+    [:unknown08,            [:unknown,3]],
+    [:maybe_rarity_marker,  :int8], #1=green text, 2=gold text, 0=normal
+    [:unknown09,            [:unknown,18]],
     #FIXME?: You can rename items in the Item World, will that make this become
     #  a DisgaeaString instead of String?
     [:name,                 [:string,33]], 
-    [:unknown08,            [:unknown,39]]
+    [:unknown10,            [:unknown,39]]
   )
   
 end
