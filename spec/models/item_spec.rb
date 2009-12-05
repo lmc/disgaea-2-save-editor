@@ -34,6 +34,16 @@ describe Item do
     @item.stats.spd.should equal 127
   end
   
+  it "should extract mv" do
+    @item.mv_struct.should be_an_instance_of BaseData::Int8
+    @item.mv.should == 1
+  end
+  
+  it "should extract jmp" do
+    @item.jmp_struct.should be_an_instance_of BaseData::Int8
+    @item.jmp.should == 0
+  end
+  
   it "should extract base stats" do
     @item.base_stats_struct.should be_an_instance_of Stats
   end
@@ -66,6 +76,11 @@ describe Item do
   it "should extract item world level" do
     @item.item_world_level_struct.should be_an_instance_of BaseData::Int8
     @item.item_world_level.should == 30
+  end
+  
+  it "should extract population" do
+    @item.population_struct.should be_an_instance_of BaseData::Int8
+    @item.population.should == 6
   end
   
 end
