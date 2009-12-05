@@ -48,4 +48,9 @@ describe Item do
     @item.item_class_id.should == 233
   end
   
+  it "should extract displayed level" do
+    @item.displayed_level_struct.should be_an_instance_of BaseData::Int8
+    @item.displayed_level.should == 30
+  end
+  
 end
