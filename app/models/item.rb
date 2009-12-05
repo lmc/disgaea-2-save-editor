@@ -12,15 +12,20 @@ class Item < BaseData
     [:item_world_level_max, :int8],
     [:unknown03,            [:unknown,2]],
     [:text_colour,          :int8], #3 = gold, #2 = green, 1 = normal
-    [:unknown04,            [:unknown,3]],
+    [:unknown04,            [:unknown,3]], #maybe int8s, related to item world levels?
     [:item_world_level,     :int8], #how many item world levels cleared
     [:unknown05,            [:unknown,5]],
     [:rarity,               :int8],
-    [:unknown06,            [:unknown,29]],
+    #[:unknown06,            [:unknown,29]],
+    [:unknown06,            [:unknown,2]],
+    [:population,           :int8],
+    [:mv,                   :int8],
+    [:jmp,                  :int8],
+    [:unknown07,            [:unknown,24]],
     #FIXME?: You can rename items in the Item World, will that make this become
     #  a DisgaeaString instead of String?
     [:name,                 [:string,33]], 
-    [:unknown07,            [:unknown,39]]
+    [:unknown08,            [:unknown,39]]
   )
   
 end
