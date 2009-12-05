@@ -58,4 +58,9 @@ describe Item do
     @item.text_colour.should == 2
   end
   
+  it "should extract max item world level" do
+    @item.max_item_world_level_struct.should be_an_instance_of BaseData::Int8
+    @item.max_item_world_level.should == 59
+  end
+  
 end
