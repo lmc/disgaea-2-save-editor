@@ -1,6 +1,10 @@
 class BaseData::Int8 < BaseData::Base
   def self.struct_size; 1; end
   
+  def assemble(file_data)
+    file_data.write(as_raw)
+  end
+  
   def disassemble(file_data)
     self.value = convert(raw_from_file(file_data))
   end
@@ -8,4 +12,9 @@ class BaseData::Int8 < BaseData::Base
   def convert(raw_data)
     raw_data.ord
   end
+  
+  def as_raw
+    self.value.chr
+  end
+  
 end
