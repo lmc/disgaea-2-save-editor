@@ -6,6 +6,10 @@ class BaseData::UnknownCollection < BaseData::StringCollection
     "size=#{size}"
   end
   
+  def as_raw
+    as_string.join
+  end
+  
   def as_string
     strings.map(&:value).map(&:chr)
   end

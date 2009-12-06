@@ -25,8 +25,20 @@ class BaseData
   
   def assemble(file)
     self.class.struct_order.each do |struct_name|
-      
+      [self.struct_values[struct_name]].flatten.each do |struct_value|
+        #debugger unless struct_value
+        unless struct_value.nil?
+          struct_value.assemble(file)
+        else
+          struct = self.class.structs[struct_name]
+          raise "Can't handle unstructured value #{struct.inspect} = #{struct_value}" unless struct[1] == -1
+          klass = struct[0].new
+          klass.value = send(struct_name)
+          klass.assemble(file)
+        end
+      end
     end
+    file
   end
   
   def disassemble(file)

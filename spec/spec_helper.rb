@@ -51,7 +51,7 @@ def bytes(*bytes)
 end
 
 class String
-  def read(bytes = 1)
+  def read(bytes = size)
     @read ||= split(//)
     output = ""
     bytes.times { output << @read.shift }

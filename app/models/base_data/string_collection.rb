@@ -17,4 +17,8 @@ class BaseData::StringCollection < BaseData::Base
     value
   end
   
+  def as_raw
+    value
+  end
+  
 end

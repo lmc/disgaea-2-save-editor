@@ -12,10 +12,6 @@ class BaseData::Base
     self.value = nil
   end
   
-  def assemble(ruby_value)
-    raise "assemble not implemented in #{self.inspect}"
-  end
-  
   def raw_from_file(file_object)
     file_object.read(self.class.struct_size)
   end
