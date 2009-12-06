@@ -23,6 +23,7 @@ class BaseData
     
   end
   
+  #FIXME: These are way too closely coupled and are doing too much magic. Refactor the whole lot once it's working.
   def assemble(file)
     self.class.struct_order.each do |struct_name|
       [self.struct_values[struct_name]].flatten.each do |struct_value|

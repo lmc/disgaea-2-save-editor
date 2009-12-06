@@ -1,5 +1,6 @@
-class BaseData::Int16 < BaseData::Base
+class BaseData::Int16 < BaseData::Int
   def self.struct_size; 2; end
+  def self.limits; 0..65535; end
   
   def disassemble(file_data)
     self.value = convert(raw_from_file(file_data))

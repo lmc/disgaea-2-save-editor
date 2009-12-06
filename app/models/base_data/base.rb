@@ -16,6 +16,10 @@ class BaseData::Base
     file_object.read(self.class.struct_size)
   end
   
+  def validate_and_limit(new_value)
+    raise "Must implement validate_and_limit for #{self.class.inspect}"
+  end
+  
   def inspect
     "#<D2 #{self.class.name.demodulize} #{inspect_value}>"
   end

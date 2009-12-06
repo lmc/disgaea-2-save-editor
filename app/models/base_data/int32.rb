@@ -1,5 +1,6 @@
-class BaseData::Int32 < BaseData::Base
+class BaseData::Int32 < BaseData::Int
   def self.struct_size; 4; end
+  def self.limits; 0..4294967296; end
   
   def disassemble(file_data)
     self.value = convert(raw_from_file(file_data))
@@ -11,7 +12,7 @@ class BaseData::Int32 < BaseData::Base
   end
   
   def pack_arg
-    is_a?(BaseData::Uint32) ? 'L' : 'l'
+    is_a?(BaseData::Uint32) ? 'l' : 'L'
   end
   
   def as_raw

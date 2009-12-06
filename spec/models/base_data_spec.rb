@@ -30,4 +30,8 @@ describe BaseData do
     base_data_instance(:int32,1).as_raw.should == bytes(1,0,0,0)
   end
   
+  it "should limit values on ints" do
+    base_data_instance(:int8,256).value.should == 255
+  end
+  
 end
