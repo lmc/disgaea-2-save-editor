@@ -18,8 +18,9 @@ describe Character do
   
   it "should assemble" do
     @output = ""
-    peek = 0..32
-    disassembled.assemble(@output)[peek].should == @file.tap { |f| f.rewind }.read[peek]
+    assembled = disassembled.assemble(@output)
+    assembled.should == @file.tap { |f| f.rewind }.read
+    assembled.size.should == 3072
   end
   
   it "should extract experience" do
