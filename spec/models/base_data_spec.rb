@@ -31,7 +31,24 @@ describe BaseData do
   end
   
   it "should limit values on ints" do
+    base_data_instance(:int8,-10).value.should == 0
     base_data_instance(:int8,256).value.should == 255
+    
+    base_data_instance(:int16,-10).value.should == 0
+    base_data_instance(:int16,75000).value.should == 65535
+    
+    base_data_instance(:uint16,-46000).value.should == -32768
+    base_data_instance(:uint16, 46000).value.should ==  32767
+    
+    base_data_instance(:int32,-5).value.should == 0
+    base_data_instance(:int32,5000000000).value.should == 4294967296
+    
+    base_data_instance(:uint32,-5000000000).value.should == -2147483648
+    base_data_instance(:uint32, 5000000000).value.should == 2147483647
+    
+    #lol Disgaea, without you I'd never imagine I'd be seriously using numbers like these to test things
+    base_data_instance(:uint64,-20000000000000000000).value.should == -18446744073709551616
+    base_data_instance(:uint64, 20000000000000000000).value.should ==  18446744073709551615
   end
   
 end

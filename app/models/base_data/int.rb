@@ -10,19 +10,7 @@ class BaseData::Int < BaseData::Base
   end
   
   def value=(new_value)
-    new_value ||= 0
-    debugger if new_value != validate_and_limit(new_value) && new_value < 0
-    if self.is_a?(BaseData::Int8) #Problems @___@
-      super
-    else
-      super(validate_and_limit(new_value))
-    end
-  end
-  
-  def raw_from_file(file)
-    resp = super
-    #debugger if self.is_a?(BaseData::Uint32) && convert(resp) < 0
-    resp
+    super(validate_and_limit(new_value))
   end
   
 end
