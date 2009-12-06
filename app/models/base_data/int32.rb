@@ -7,7 +7,14 @@ class BaseData::Int32 < BaseData::Base
   
   def convert(raw_data)
     #FIXME: uint64 inherits this and we're not taking any precautions for it
-    chr = is_a?(BaseData::Uint32) ? 'L' : 'l'
-    raw_data.unpack(chr).first
+    raw_data.unpack(pack_arg).first
+  end
+  
+  def pack_arg
+    is_a?(BaseData::Uint32) ? 'L' : 'l'
+  end
+  
+  def as_raw
+    [self.value].pack(pack_arg)
   end
 end

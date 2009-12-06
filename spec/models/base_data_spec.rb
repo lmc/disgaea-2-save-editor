@@ -24,6 +24,10 @@ describe BaseData do
     base_data_instance(:int8,1).as_raw.should == bytes(1)
     base_data_instance(:int8,255).as_raw.should == bytes(255)
     base_data_instance(:int8,255).as_raw.size.should == 1
+    
+    base_data_instance(:int16,1).as_raw.should == bytes(1,0)
+    
+    base_data_instance(:int32,1).as_raw.should == bytes(1,0,0,0)
   end
   
 end

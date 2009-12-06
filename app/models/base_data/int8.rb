@@ -1,10 +1,6 @@
 class BaseData::Int8 < BaseData::Base
   def self.struct_size; 1; end
   
-  def assemble(file_data)
-    file_data.write(as_raw)
-  end
-  
   def disassemble(file_data)
     self.value = convert(raw_from_file(file_data))
   end

@@ -3,6 +3,10 @@ class BaseData::Base
   
   attr_accessor :value
   
+  def assemble(file_data)
+    file_data.write(as_raw)
+  end
+  
   def disassemble(file_object)
     raise "disassemble not implemented in #{self.inspect}"
     self.value = nil

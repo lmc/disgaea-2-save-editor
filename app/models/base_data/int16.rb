@@ -6,7 +6,14 @@ class BaseData::Int16 < BaseData::Base
   end
   
   def convert(raw_data)
-    chr = is_a?(BaseData::Uint16) ? 'S' : 's'
-    raw_data.unpack(chr).first
+    raw_data.unpack(pack_arg).first
+  end
+  
+  def pack_arg
+    is_a?(BaseData::Uint16) ? 'S' : 's'
+  end
+  
+  def as_raw
+    [self.value].pack(pack_arg)
   end
 end

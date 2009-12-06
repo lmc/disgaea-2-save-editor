@@ -66,8 +66,4 @@ class BaseData
     values
   end
   
-  def as_raw
-    raise "override"
-  end
-  
 end
