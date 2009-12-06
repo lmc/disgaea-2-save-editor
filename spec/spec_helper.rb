@@ -46,9 +46,19 @@ Spec::Runner.configure do |config|
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
 end
 
-class FileString < String
-  def read
+def bytes(*bytes)
+  bytes.map(&:chr).join('')
+end
+
+class String
+  def read(bytes = 1)
     @read ||= split(//)
-    @read.shift
+    output = ""
+    bytes.times { output << @read.shift }
+    output
+  end
+  
+  def write(data)
+    self << data
   end
 end

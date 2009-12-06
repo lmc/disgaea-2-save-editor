@@ -16,6 +16,11 @@ describe Character do
     disassembled.should be_an_instance_of Character
   end
   
+  it "should assemble" do
+    @output = ""
+    disassembled.assemble(@output).should == @file.read
+  end
+  
   it "should extract experience" do
     disassembled.experience_struct.should be_an_instance_of BaseData::Uint64
     disassembled.experience.should == 1469552283

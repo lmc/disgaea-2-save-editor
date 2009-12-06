@@ -15,6 +15,20 @@ class BaseData
     struct_values.map { |key,value| [key,value.value] }
   end
   
+  def self.assemble(ruby_value)
+    
+  end
+  
+  def self.disassemble(raw_value)
+    
+  end
+  
+  def assemble(file)
+    self.class.struct_order.each do |struct_name|
+      
+    end
+  end
+  
   def disassemble(file)
     self.class.struct_order.each do |struct_name|
       klass,count = *self.class.structs[struct_name]
