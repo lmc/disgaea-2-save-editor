@@ -13,12 +13,16 @@ class Character < BaseData
     [:unknown02,          [:unknown,32]],
     [:mana,               :uint32],
     #[:unknown03,          [:unknown,78]],
-    [:unknown03,          [:unknown,48]],
+    [:unknown03,          [:unknown,24]],
+    [:weapon_mastery,     WeaponSkills],
+    [:unknown04,          [:unknown,1]],
+    [:basic_unknown01,    BasicStats],
+    [:basic_unknown02,    BasicStats],
     [:basic_stats,        BasicStats],
-    [:unknown04,          [:unknown,22]],
+    [:unknown05,          [:unknown,22]],
     [:felonies_total,     :int16],
     [:felonies_displayed, :int16],
-    [:unknown05,          [:unknown,374]]
+    [:unknown06,          [:unknown,374]]
   )
 
 end
