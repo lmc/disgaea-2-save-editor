@@ -18,12 +18,17 @@ class BaseData::UnknownCollection < BaseData::StringCollection
     strings.map(&:value)
   end
   
-  def as_int16(offset = 0)
+  def as_int16(offset = 0,unsigned = false)
     int8s = as_int8
     offset.times { int8s.shift }
     int8s.in_groups_of(2).map do |args|
-      BaseData::Int16.new.convert(args.compact.map(&:chr).join)
+      klass = unsigned ? BaseData::Uint16 : BaseData::Int16
+      klass.new.convert(args.compact.map(&:chr).join)
     end
+  end
+  
+  def as_uint16(offset = 0)
+    as_int16(offset,true)
   end
   
   def as_int32(offset = 0)
