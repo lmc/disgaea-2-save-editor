@@ -46,6 +46,7 @@ module Structure
 
     def class_from_symbol(symbol)
       if symbol.is_a?(Symbol)
+        symbol = :plain_string if symbol == :string
         "BaseData::#{symbol.to_s.classify}".constantize
       else
         symbol

@@ -1,6 +1,5 @@
 #Some strings are stored as plain-text, others are in this weird offset form @__@
-require 'base_data/string' #HACK: Stop ruby getting confused and thinking we want ::String
-class BaseData::DisgaeaString < BaseData::String
+class BaseData::DisgaeaString < BaseData::PlainString
   ASCI_TO_DISGAEA_OFFSET = 31
   MAGIC_BUMP_NUMBER = 128
   

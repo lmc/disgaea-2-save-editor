@@ -65,7 +65,7 @@ class BaseData
         value.disassemble(file)
         values << value
       end
-      if klass == BaseData::String
+      if klass == BaseData::PlainString
         values = BaseData::StringCollection.new(values)
       elsif klass == BaseData::Unknown
         values = BaseData::UnknownCollection.new(values)

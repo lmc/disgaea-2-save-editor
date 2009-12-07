@@ -1,4 +1,5 @@
-class BaseData::String < BaseData::Base
+#renaming because Ruby is fucking retarded about figuring out what constants we actually want
+class BaseData::PlainString < BaseData::Base
   def self.struct_size; 1; end
   
   def disassemble(file_data)
