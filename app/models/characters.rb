@@ -12,4 +12,11 @@ class Characters < Array
     self
   end
   
+  def <<(item)
+    super
+    if item.respond_to?(:parent_position)
+      item.parent_position = (self.size - 1)
+    end
+  end
+  
 end

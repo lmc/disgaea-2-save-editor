@@ -1,6 +1,7 @@
 class Character < BaseData
   include Structure
   SIZE = 3072
+  attr_accessor :parent_position #so we know where we sit in the characters array
   
   structure(
     [:experience,         :uint64],

@@ -4,6 +4,11 @@ class CharactersController < InheritedResources::Base
   
   protected
   
+  def resource
+    @character = collection[params[:id].to_i] #TODO: Make it so it disassembles as little of the file as possible?
+    @character
+  end
+  
   def collection
     @characters ||= current_save.disassemble.characters
     @characters

@@ -1,0 +1,13 @@
+%h1 Edit Character:
+- semantic_form_for @character do |f|
+  - f.inputs do
+    = f.input :name
+    = f.input :class_name
+  -# experience/level (TODO: calculate level from exp)
+  -# mana
+  -# felonies
+  -# active stats (TODO: check how to do fields_for with formtastic)
+  -# naked stats
+  
+  - f.buttons do
+    = f.commit_button

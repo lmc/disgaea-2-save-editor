@@ -11,8 +11,12 @@ module FakeActiveRecord
   end
   
   module InstanceMethods
+    def to_param
+      "#{id}"
+    end
+    
     def id #to shut up depreciation warnings
-      object_id
+      respond_to?(:parent_position) ? parent_position : object_id
     end
     
     def new_record?

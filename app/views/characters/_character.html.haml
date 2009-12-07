@@ -6,3 +6,5 @@
       %td.stats= render character.stats
       %td.items
         %ul= render character.items
+    %tr
+      %td= link_to 'Edit', edit_character_path(character)
