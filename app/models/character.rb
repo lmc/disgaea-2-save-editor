@@ -13,11 +13,13 @@ class Character < BaseData
     [:unknown02,          [:unknown,32]],
     [:mana,               :uint32],
     #[:unknown03,          [:unknown,78]],
-    [:unknown03,          [:unknown,24]],
+    [:unknown03,          [:unknown,10]],
+    [:weapon_unknown,     WeaponSkills], #seems to mirror weapon_grade, somewhat. effective grade, changed by weapon scrolls? 
+    [:weapon_grade,       WeaponSkills], #the A/B/C/D/E grades given on the weapon mastery screen
     [:weapon_mastery,     WeaponSkills],
-    [:unknown04,          [:unknown,1]],
-    [:basic_unknown01,    BasicStats],
-    [:basic_unknown02,    BasicStats],
+    [:unknown04,          [:unknown,17]],
+    #[:basic_unknown01,    BasicStats],
+    #[:basic_unknown02,    BasicStats],
     [:basic_stats,        BasicStats],
     [:unknown05,          [:unknown,22]],
     [:felonies_total,     :int16],
