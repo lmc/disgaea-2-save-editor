@@ -51,4 +51,8 @@ describe BaseData do
     base_data_instance(:uint64, 20000000000000000000).value.should ==  18446744073709551615
   end
   
+  it "should limit length and values in strings"
+  
+  it "should limit length and values in disgaea strings"
+  
 end

@@ -4,4 +4,6 @@ class BaseData::String < BaseData::Base
   def disassemble(file_data)
     self.value = raw_from_file(file_data)
   end
+  
+  #TODO: Limit string lengths when re-assigned
 end
