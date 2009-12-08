@@ -1,3 +1,4 @@
+#FIXME: Refactor using structure
 class BaseData::TimeStamp < BaseData::Base
   def self.struct_size; 4; end
   
@@ -6,9 +7,13 @@ class BaseData::TimeStamp < BaseData::Base
   
   def disassemble(file_data)
     raw          = raw_from_file(file_data)
-    self.hours   = raw[0..1].unpack('c').first
+    self.hours   = raw[0..1].unpack('s').first
     self.minutes = raw[2]
     self.seconds = raw[3]
+  end
+  
+  def as_raw
+    [[self.hours].pack('s'),self.minutes.chr,self.seconds.chr].join('')
   end
   
   def inspect_value

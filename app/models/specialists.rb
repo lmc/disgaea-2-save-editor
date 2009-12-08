@@ -10,4 +10,10 @@ class Specialists < Array
     self
   end
   
+  def assemble(file)
+    self.each do |specialist|
+      specialist.assemble(file)
+    end
+  end
+  
 end

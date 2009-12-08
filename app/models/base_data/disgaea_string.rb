@@ -5,7 +5,8 @@ class BaseData::DisgaeaString < BaseData::PlainString
   
   TRANSLATIONS = {
     64  => ' ',
-    70  => ':'
+    70  => ':',
+    124 => '-'
   }
   
   def self.translate_char(disgaea_char)
@@ -24,11 +25,11 @@ class BaseData::DisgaeaString < BaseData::PlainString
   def self.untranslate_char(char)
     if char =~ /[a-zA-Z]/
       code  = char.ord
-      code += 1 if code > (MAGIC_BUMP_NUMBER - ASCI_TO_DISGAEA_OFFSET)
+      code += 1 if code >= (MAGIC_BUMP_NUMBER - ASCI_TO_DISGAEA_OFFSET)
       code += ASCI_TO_DISGAEA_OFFSET
       [130.chr,code.chr].join
     elsif TRANSLATIONS.values.include?(char)
-      [129.chr,TRANSLATIONS.index(char),chr].join
+      [129.chr,TRANSLATIONS.index(char).chr].join
     else
       "\000\000"
     end

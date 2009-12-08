@@ -70,7 +70,12 @@ class BaseData
       elsif klass == BaseData::Unknown
         values = BaseData::UnknownCollection.new(values)
       elsif klass == BaseData::DisgaeaString
-        values = BaseData::DisgaeaStringCollection.new(values)
+        #HACK: Try to guess whether this is a normal or disgaea string
+        if values.first.value.ord >= 128
+          values = BaseData::DisgaeaStringCollection.new(values)
+        else
+          values = BaseData::StringCollection.new(values)
+        end
       end
     else
       values = klass.new
