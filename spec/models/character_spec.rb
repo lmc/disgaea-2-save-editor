@@ -73,6 +73,11 @@ describe Character do
     disassembled.stats.spd.should equal 25808
   end
   
+  it "should extract current hp and sp" do
+    disassembled.current_hp.should == 48728
+    disassembled.current_sp.should == 14822
+  end
+  
   it "should extract mana" do
     disassembled.mana_struct.should be_an_instance_of BaseData::Uint32
     disassembled.mana.should equal 801740

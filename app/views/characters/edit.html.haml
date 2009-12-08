@@ -3,11 +3,13 @@
   - f.inputs do
     = f.input :name
     = f.input :class_name
-  -# experience/level (TODO: calculate level from exp)
-  -# mana
-  -# felonies
-  -# active stats (TODO: check how to do fields_for with formtastic)
-  -# naked stats
+    -# experience/level (TODO: calculate level from exp)
+    = f.input :experience
+    = f.input :mana
+    = f.input :felonies_total
+    = f.input :felonies_displayed
+    -# active stats (TODO: check how to do fields_for with formtastic)
+    -# naked stats
   
   - f.buttons do
     = f.commit_button
