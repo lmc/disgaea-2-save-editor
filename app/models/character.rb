@@ -8,11 +8,12 @@ class Character < BaseData
     [:items,              CharacterItems],
     [:name,               [:disgaea_string,41]], #FIXME: Story characters seem to use a string-table id
     [:class_name,         [:string,61]],
-    [:tunknown,           [:unknown,142]],
-    [:weapon_skill_exp,   [:int32,111]],
-    [:weapon_skill,       [:int16,111]],
-    [:weapon_skill_level, [:int8,111]],
-    [:uunknown,           [:unknown,455]],
+    [:tunknown,           [:unknown,138]],
+    [:weapon_skill_exp,   [:int32,112]],
+    [:weapon_skill,       [:int16,112]],
+    [:weapon_skill_level, [:int8,112]],
+    [:uunknown,           [:unknown,448]],
+    [:weapon_skill_count, :int32],
     [:current_hp,         :int32],
     [:current_sp,         :int32],
     [:stats,              Stats], #calculated stats?
