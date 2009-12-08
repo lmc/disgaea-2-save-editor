@@ -3,8 +3,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe Specialist do
   
   before do
-    @file = File.open(RAILS_ROOT+'/spec/fixtures/full_save.bin')
-    @specialist = Save.new.disassemble.characters[0].items[0].specialists[0]
+    @file = File.open(RAILS_ROOT+'/spec/fixtures/character.bin')
+    @specialist = Character.new.disassemble(@file).items[0].specialists[0]
   end
   
   it "should disassemble" do

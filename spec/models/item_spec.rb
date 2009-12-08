@@ -4,7 +4,7 @@ describe Item do
   
   before do
     @file = File.open(RAILS_ROOT+'/spec/fixtures/character.bin')
-    @item = Save.new.disassemble.characters[0].items[0]
+    @item = Character.new.disassemble(@file).items[0]
   end
   
   it "should disassemble" do

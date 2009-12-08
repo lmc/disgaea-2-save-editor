@@ -2,10 +2,6 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Compare do
   
-  before do
-    @file = File.open(RAILS_ROOT+'/spec/fixtures/full_save.bin')
-  end
-  
   def plain_data
     [
       [1,2,3,4],
