@@ -8,7 +8,14 @@ class Character < BaseData
     [:items,              CharacterItems],
     [:name,               [:disgaea_string,41]], #FIXME: Story characters seem to use a string-table id
     [:class_name,         [:string,61]],
-    [:tunknown,           [:unknown,1374]],
+    #[:tunknown,           [:unknown,810]],
+    [:tunknown,           [:unknown,144]],
+    #weapon skill level starts at 810, how long? (end 920?)
+    [:weapon_skill_exp,   [:int32,111]],
+    [:weapon_skill,       [:int16,111]],
+    
+    [:weapon_skill_level, [:int8,111]],
+    [:uunknown,           [:unknown,453]],
     [:current_hp,         :int32],
     [:current_sp,         :int32],
     [:stats,              Stats], #calculated stats?
