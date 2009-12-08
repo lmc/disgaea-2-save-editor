@@ -32,13 +32,30 @@ class Character < BaseData
   )
   
   WEAPON_SKILLS = [
-    202 => [:sword,nil,'Blade Rush'],
-    203 => [:sword,nil,'Hurricane Slash'],
-    204 => [:sword,nil,'Moon Slash'],
-    205 => [:sword,nil,'Winged Slayer'],
-    206 => [:sword,nil,'Dark X Slash'],
-    206 => [:sword,nil,'Dimension Slash'],
-    207 => [:sword,nil,'Ultra Overlord'],
+    201  => [:sword,nil,'Blade Rush'],
+    202  => [:sword,nil,'Hurricane Slash'],
+    203  => [:sword,nil,'Moon Slash'],
+    204  => [:sword,nil,'Winged Slayer'],
+    205  => [:sword,nil,'Dark X Slash'],
+    206  => [:sword,nil,'Dimension Slash'],
+    207  => [:sword,nil,'Ultra Overlord'],
+    
+    301  => [:spear,nil,'Impaler'],
+    302  => [:spear,nil,'Lightning Spear'],
+    303  => [:spear,nil,'Asteroid Drop'],
+    
+    401  => [:bow,  nil,'Poison Blast'],
+    402  => [:bow,  nil,'Raiden Missle'],
+    403  => [:bow,  nil,'Delta Split'],
+    
+    2125 => [:special,:mothman,'Mothman Shot'],
+    2121 => [:special,:mothman,'Hell Pollen'],
+    2122 => [:special,:mothman,'Bug Hypnosis'],
+    2123 => [:special,:mothman,'Ultra Sound'],
+    2124 => [:special,:mothman,'Tornado Dive'],
+    2126 => [:special,:mothman,'Mothman Go'],
+    
+    
   ]
 
 end
