@@ -9,10 +9,14 @@ class Character < BaseData
     [:name,               [:disgaea_string,41]], #FIXME: Story characters seem to use a string-table id
     [:class_name,         [:string,61]],
     [:tunknown,           [:unknown,138]],
+    
+    #NOTE!: Weapon skills are not nessecarily stored in the order they're displayed
     [:weapon_skill_exp,   [:int32,112]],
     [:weapon_skill,       [:int16,112]],
     [:weapon_skill_level, [:int8,112]],
+    #Maybe some stuff in uunknown controls the order?
     [:uunknown,           [:unknown,448]],
+    
     [:weapon_skill_count, :int32],
     [:current_hp,         :int32],
     [:current_sp,         :int32],
@@ -48,6 +52,37 @@ class Character < BaseData
     401  => [:bow,  nil,'Poison Blast'],
     402  => [:bow,  nil,'Raiden Missle'],
     403  => [:bow,  nil,'Delta Split'],
+    
+    #Most specials for certain characters will look weird with other characters due to missing
+    #animation frames
+    1011 => [:special,:adell,'Crimson Flame'],
+    1012 => [:special,:adell,'Soaring Fire'],
+    1013 => [:special,:adell,'Vulcan Blaze'],
+    
+    1021 => [:special,:rozalin,'Rose Thorns'],
+    1022 => [:special,:rozalin,'Kneel Before Me'],
+    1023 => [:special,:rozalin,'Rose Liberation'],
+    
+    1031 => [:special,:axel,'Shocking Soul'],
+    1032 => [:special,:axel,'My Heart Shakes'],
+    1033 => [:special,:axel,'Love Dynamite'],
+    
+    1041 => [:special,:etna,'Prinny Raid'],
+    1042 => [:special,:etna,'Sexy Beam'],
+    1043 => [:special,:etna,'Chaos Impact'],
+    
+    1051 => [:special,:yukimaru,'Nadarejin'],
+    
+    #NOTE: Assigning bad weapon_skill values will hard-lock the PSP when you go to use the character
+    #in battle. The skills will not been shown on the status screens outside of battle.
+    #Some of these are bad
+    #1052
+    #1053
+    #1061
+    #1062
+    #1063
+    #1071
+    #1072
     
     2125 => [:special,:mothman,'Mothman Shot'],
     2121 => [:special,:mothman,'Hell Pollen'],
