@@ -31,17 +31,32 @@ class Specialist < BaseData
     end
   end
   
+  #call after level=, set raw_level, multiply or not depending on subdued status
+  #call after subdued=, multiply or divide based on old status
+  def recalculate_level_and_subdued_status!
+    
+  end
+  
+  TYPE_EFFECT_LIMITS = {
+    :stat   => 19998,
+    :resist => 99,
+    :effect => 99,
+    :bonus  => 300,
+    :lover  => 25
+  }
+  
   CLASS_IDS = {
-    2    => 'Master',
-    3    => 'Gladiator',
-    5    => 'Tutor',
-    6    => 'Coach',
-    8    => 'Physician',
-    21   => 'Alchemist',
-    46   => 'Firefighter',
-    63   => 'Manager',
-    1118 => 'Rune Knight Lover',
-    1119 => 'Female Samurai Lover',
+    #specialist type(stat,resist,effect,bonus,lover), name
+    2    => ['Master'],
+    3    => [[:stat,:atk],'Gladiator'],
+    5    => ['Tutor'],
+    6    => ['Coach'],
+    8    => ['Physician'],
+    21   => ['Alchemist'],
+    46   => [[:resist,:fire],'Firefighter'],
+    63   => ['Manager'],
+    1118 => [[:lover,:rune_knight],'Rune Knight Lover'],
+    1119 => [[:lover,:female_samurai],'Female Samurai Lover']
   }
   
   def class_name

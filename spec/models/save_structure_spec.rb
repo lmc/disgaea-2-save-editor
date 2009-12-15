@@ -16,6 +16,7 @@ describe Character do
     #disassembled.should be_an_instance_of SaveStructure
   end
   
+=begin
   it "should assemble" do
     @output = ""
     assembled = disassembled.assemble(@output)
@@ -43,5 +44,6 @@ describe Character do
     
     assembled.size.should == 546360
   end
+=end
 
 end

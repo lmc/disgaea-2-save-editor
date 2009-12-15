@@ -16,7 +16,8 @@ class Item < BaseData
     [:item_world_level,     :int8], #how many item world levels cleared
     [:unknown05,            [:unknown,5]],
     [:rarity,               :int8],
-    #[:unknown06,            [:unknown,29]],
+    
+    #range? critical chance (fists are higher i think)?
     [:unknown06,            [:unknown,2]],
     [:population,           :int8],
     [:mv,                   :int8],
@@ -24,7 +25,7 @@ class Item < BaseData
     [:unknown07,            [:unknown,1]], #icon ids? identical for all "angel's sandals", not for all swords? maybe duplicate entries?
     [:maybe_is_weapon,      :int8],
     [:unknown08,            [:unknown,3]],
-    [:maybe_rarity_marker,  :int8], #1=green text, 2=gold text, 0=normal
+    [:rarity_badge,          :int8], #1=silver 'R', 2=gold 'L', 0=normal
     [:unknown09,            [:unknown,18]], #seems to just be 00, maybe placeholder for DisgaeaString as below?
     #FIXME?: You can rename items in the Item World, will that make this become
     #  a DisgaeaString instead of String?

@@ -14,8 +14,10 @@ class BaseData::UnknownCollection < BaseData::StringCollection
     strings.map(&:value).map(&:chr)
   end
   
-  def as_int8
-    strings.map(&:value)
+  def as_int8(unsigned = false)
+    ints = strings.map(&:value)
+    ints.map! { |int| BaseData::Uint8.unsigned_to_signed(int) } if unsigned
+    ints
   end
   
   def as_int16(offset = 0,unsigned = false)
