@@ -33,7 +33,10 @@ class Character < BaseData
     [:unknown05,          [:unknown,22]],
     [:felonies_total,     :int16],
     [:felonies_displayed, :int16],
-    [:unknown06,          [:unknown,374]]
+    #[:unknown06,          [:unknown,374]]
+    [:base_element_stats, ElementalStats],
+    [:element_stats,      ElementalStats],
+    [:unknown06,          [:unknown,368]]
   )
   
   WEAPON_SKILLS = [
