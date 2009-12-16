@@ -38,22 +38,24 @@ class Specialist < BaseData
   end
   
   TYPE_EFFECT_LIMITS = {
-    :stat   => 19998,
-    :resist => 99,
-    :effect => 99,
-    :bonus  => 300,
-    :lover  => 25
+    :stat    => 19998,
+    :effect  => 100,
+    :element => 99,
+    :bonus   => 100,
+    :lover   => 25
   }
   
   CLASS_IDS = {
     #specialist type(stat,resist,effect,bonus,lover), name
-    2    => ['Master'],
-    3    => [[:stat,:atk],'Gladiator'],
-    5    => ['Tutor'],
-    6    => ['Coach'],
-    8    => ['Physician'],
-    21   => ['Alchemist'],
-    46   => [[:resist,:fire],'Firefighter'],
+    1    => [[:stat,:hp],             'Dietician'], #test
+    2    => [[:stat,:sp],             'Master'],
+    3    => [[:stat,:atk],            'Gladiator'],
+    4    => [[:stat,:def],            'Sentry'], #test
+    5    => [[:stat,:int],            'Tutor'],
+    6    => [[:stat,:spd],            'Coach'],
+    8    => [[:stat,:res],            'Physician'],
+    21   => [[:effect,:poison],       'Alchemist'],
+    46   => [[:resist,:fire],         'Firefighter'],
     63   => ['Manager'],
     1118 => [[:lover,:rune_knight],'Rune Knight Lover'],
     1119 => [[:lover,:female_samurai],'Female Samurai Lover']
