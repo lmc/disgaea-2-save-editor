@@ -51,15 +51,33 @@ describe Character do
     #disassembled.class_name.strip.should == 'Exorcist'
   end
   
-  it "should extract resistances"
+  it "should extract element stats" do
+    disassembled.element_stats_struct.should be_an_instance_of ElementalStats
+    disassembled.element_stats.fire.should == 50
+    disassembled.element_stats.wind.should == 0
+    disassembled.element_stats.ice.should  == -50
+  end
+  
+  it "should extract base element stats" do
+    disassembled.base_element_stats_struct.should be_an_instance_of ElementalStats
+    disassembled.base_element_stats.fire.should == 50
+    disassembled.base_element_stats.wind.should == 0
+    disassembled.base_element_stats.ice.should  == -50
+  end
   
   it "should extract skill experience"
   
   it "should extract skills"
   
-  it "should extract current HP"
+  it "should extract current HP" do
+    disassembled.current_hp_struct.should be_an_instance_of BaseData::Int32
+    disassembled.current_hp.should == 48728
+  end
   
-  it "should extract current SP"
+  it "should extract current SP" do
+    disassembled.current_sp_struct.should be_an_instance_of BaseData::Int32
+    disassembled.current_sp.should == 14822
+  end
   
   it "should extract stats" do
     disassembled.stats_struct.should be_an_instance_of Stats

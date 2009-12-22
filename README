@@ -15,3 +15,24 @@ s.characters
 s.characters.first
 s.characters.first.items
 s.characters.first.items.first
+
+REVERSE ENGINEERING
+Includes a useful comparison class for comparing unknown blocks of structures.
+Example, comparing the first 5 character's unknown04 blocks, displaying them as int16s
+
+characters = Save.new.disassemble.characters
+compare = Compare.new(*characters[0...5])
+compare.map = [:unknown04,:as_int16]
+compare.compare_string
+
+Gives output like the following:
+
+0	2048	1536	0	3072	2304
+1	3604	3602	0	2060	3341
+2	1552	2318	0	3598	2317
+3	778	  4108	0	1539	3337
+4	2048	1536	0	3072	2304
+5	3604	3602	0	2060	3341
+6	1552	2318	0	3598	2317
+7	778	  4108	0	1539	3337
+

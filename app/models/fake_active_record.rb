@@ -1,7 +1,12 @@
+#module ActiveRecord; end
+#class ActiveRecord::Base; end
+#class ActiveRecord::ActiveRecordError < StandardError; end
+
 module FakeActiveRecord
   def self.included(base)
     base.send(:include,InstanceMethods)
     base.send(:extend, ClassMethods)
+    #base.send(:include,ActiveRecord::Validations)
   end
   
   module ClassMethods
