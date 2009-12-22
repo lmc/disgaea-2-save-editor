@@ -10,7 +10,7 @@ class CharactersController < InheritedResources::Base
   end
   
   def collection
-    @characters ||= current_save.disassemble.characters
+    @characters ||= current_disassembled.characters
     @characters
   end
   

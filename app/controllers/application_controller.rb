@@ -13,4 +13,9 @@ class ApplicationController < ActionController::Base
     @current_save ||= Save.new(@file)
   end
   
+  def current_disassembled
+    @current_disassembled ||= current_save.disassemble
+    @current_disassembled
+  end
+  
 end

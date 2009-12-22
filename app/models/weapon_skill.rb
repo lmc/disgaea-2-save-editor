@@ -17,9 +17,15 @@ class WeaponSkill
       :skill_class => stats[1],
       :name        => stats[2]
     }
+  rescue
+    {
+      :weapon_type => nil,
+      :skill_class => nil,
+      :name        => nil
+    }
   end
   
-  WEAPON_SKILLS = [
+  WEAPON_SKILLS = {
     201  => [:sword,nil,'Blade Rush'],
     202  => [:sword,nil,'Hurricane Slash'],
     203  => [:sword,nil,'Moon Slash'],
@@ -75,6 +81,6 @@ class WeaponSkill
     2126 => [:special,:mothman,'Mothman Go'],
     
     
-  ]
+  }
   
 end

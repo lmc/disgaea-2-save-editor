@@ -1,6 +1,15 @@
 class WeaponMastery < BaseData
   include Structure
   
+  WEAPON_MASTERY_GRADES = {
+    2..4   => :e,
+    5..9   => :d,
+    10..14 => :c,
+    15..19 => :b,
+    20..24 => :a,
+    25..30 => :s
+  }
+  
   structure(
     [:fist,   :int8],
     [:sword,  :int8],

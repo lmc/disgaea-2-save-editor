@@ -1,0 +1,13 @@
+%h1 Weapon Skills
+%h2= @character.name
+
+%table
+  %tr
+    %th Skill
+    %th Level
+    %th EXP
+  - @weapon_skills.each do |s|
+    %tr[s]
+      %td= s.skill_name
+      %td= s.level
+      %td= s.exp
