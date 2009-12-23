@@ -26,6 +26,11 @@ class WeaponSkill
   end
   
   WEAPON_SKILLS = {
+    101  => [:fist, nil,'Triple Strike'],
+    102  => [:fist, nil,'Tiger Charge'],
+    103  => [:fist, nil,'Lion\'s Roar'],
+    104  => [:fist, nil,'Tiger Charge'],
+    
     201  => [:sword,nil,'Blade Rush'],
     202  => [:sword,nil,'Hurricane Slash'],
     203  => [:sword,nil,'Moon Slash'],
@@ -53,12 +58,38 @@ class WeaponSkill
     705  => [:magic,:fire,'Tera Fire'],
     706  => [:magic,:fire,'Peta Fire'],
     
+    721  => [:magic,:fire,'Ice'],
+    722  => [:magic,:fire,'Mega Ice'],
+    723  => [:magic,:fire,'Giga Ice'],
+    724  => [:magic,:fire,'Omega Ice'],
+    725  => [:magic,:fire,'Tera Ice'],
+    726  => [:magic,:fire,'Peta Ice'],
+        
     731  => [:magic,:star,'Star'],
     732  => [:magic,:star,'Mega Star'],
     733  => [:magic,:star,'Giga Star'],
     734  => [:magic,:star,'Omega Star'],
     735  => [:magic,:star,'Tera Star'],
     736  => [:magic,:star,'Peta Star'],
+    
+    801  => [:magic,:buff,'Heal'],
+    802  => [:magic,:buff,'Mega Heal'],
+    803  => [:magic,:buff,'Giga Heal'],
+    804  => [:magic,:buff,'Omega Heal'],
+    805  => [:magic,:buff,'Tera Heal'], #check, maybe espoir instead?
+    
+    811  => [:magic,:buff,'Braveheart'],
+    812  => [:magic,:buff,'Shield'], #check
+    813  => [:magic,:buff,'Magic Boost'], #check
+    
+    817  => [:magic,:drain,'Enfeeble'],
+    818  => [:magic,:drain,'Armor Break'],
+    820  => [:magic,:drain,'Slow'],
+    821  => [:magic,:drain,'Resist Break'],
+    
+    901  => [:special,:geomaster,'Geo Change'],
+    905  => [:special,:geomaster,'Geo Blast'],
+    906  => [:special,:geomaster,'Geo Warp'],
     
     921  => [:magic,:buff,'Fire Weapon'], #check
     924  => [:magic,:buff,'Fire Charge'], #check
@@ -87,6 +118,7 @@ class WeaponSkill
     1043 => [:special,:etna,'Chaos Impact'],
     
     1051 => [:special,:yukimaru,'Nadarejin'],
+    1052 => [:special,:yukimaru,'Setsugetsuka'],
     
     #NOTE: Assigning bad weapon_skill values will hard-lock the PSP when you go to use the character
     #in battle. The skills will not been shown on the status screens outside of battle.
@@ -99,18 +131,39 @@ class WeaponSkill
     #1071
     #1072
     
+    1101 => [:special,:taro,'Milk'],
+    1105 => [:magichange,:taro,'Milk Splash'],
+    
+    1111 => [:special,:hanako,'Song of Hope'],
+    1111 => [:magichange,:hanako,'It\'s A Vase'],
+    
+    1121 => [:special,:tink,'Kero Change!'],
+    1122 => [:special,:tink,'Sonic Roll'],
+    1125 => [:magichange,:tink,'Gutsy Tink'],
+    
     1301 => [:special,:raspberyl,'D-Rule 1: Morality'],
     1302 => [:special,:raspberyl,'D-Rule 2: Volunteer'],
     1303 => [:special,:raspberyl,'D-Rule 3: EcoFriend'],
     1305 => [:magichange,:raspberyl,'Imperial Cross'],
     1306 => [:magichange,:raspberyl,'Delta Extreme'],
     
-    2125 => [:special,:mothman,'Mothman Shot'],
+    1311 => [:special,:mr_champloo,'Shredder Kick'],
+    1312 => [:special,:mr_champloo,'Chef\'s Special'],
+    1313 => [:special,:mr_champloo,'Flaming Stir-Fry'],
+    
+    2071 => [:special,:prinny,'Prinny Barrage'],
+    2072 => [:special,:prinny,'Prinny Dance'],
+    2073 => [:special,:prinny,'Prinny Bomb'],
+    2074 => [:special,:prinny,'Pringer Beam'],
+    2075 => [:magichange,:prinny,'Panic Laser'],
+    2076 => [:magichange,:prinny,'Prinnical Shock'],
+    
     2121 => [:special,:mothman,'Hell Pollen'],
     2122 => [:special,:mothman,'Bug Hypnosis'],
     2123 => [:special,:mothman,'Ultra Sound'],
     2124 => [:special,:mothman,'Tornado Dive'],
-    2126 => [:special,:mothman,'Mothman Go'],
+    2125 => [:magichange,:mothman,'Mothman Shot'],
+    2126 => [:magichange,:mothman,'Mothman Go'],
     
     
   }
