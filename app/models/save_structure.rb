@@ -3,7 +3,12 @@ class SaveStructure < BaseData
   structure(
     [:header,     SaveHeader], #49
     [:unknown01,  [:unknown,3239]],
-    [:characters, Characters], #3072 x 16 TODO: Find out max characters in save
-    [:unknown02,  [:unknown,(543072 - (3072 * Characters.const_get(:SIZE)))]]
+    [:characters, Characters], #3072 x 128
+    [:unknown02,  [:unknown,7040]],
+    [:wtf_items,  CharacterItems], #wtf, there's 4 mystery items at the start of the array here
+    [:pack_items, PackItems],
+    [:warehouse_items, WarehouseItems],
+    [:unknown03,  [:unknown,(543072 - 393216 - 7040 - (256 * 4) - (256 * 24) - (256 * 512))]]
   )
 end
+334744
