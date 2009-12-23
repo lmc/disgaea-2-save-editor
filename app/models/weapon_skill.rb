@@ -7,7 +7,7 @@ class WeaponSkill
   end
   
   def skill_name
-    skill_stats[:name]
+    skill_stats[:name] || "Unknown (#{skill})"
   end
   
   def skill_stats
@@ -42,6 +42,32 @@ class WeaponSkill
     402  => [:bow,  nil,'Raiden Missle'],
     403  => [:bow,  nil,'Delta Split'],
     
+    501  => [:gun,  nil,'Tri-Burst'],
+    502  => [:gun,  nil,'Gaia Blast'],
+    503  => [:gun,  nil,'Proximal Shot'],
+    
+    701  => [:magic,:fire,'Fire'],
+    702  => [:magic,:fire,'Mega Fire'],
+    703  => [:magic,:fire,'Giga Fire'],
+    704  => [:magic,:fire,'Omega Fire'],
+    705  => [:magic,:fire,'Tera Fire'],
+    706  => [:magic,:fire,'Peta Fire'],
+    
+    731  => [:magic,:star,'Star'],
+    732  => [:magic,:star,'Mega Star'],
+    733  => [:magic,:star,'Giga Star'],
+    734  => [:magic,:star,'Omega Star'],
+    735  => [:magic,:star,'Tera Star'],
+    736  => [:magic,:star,'Peta Star'],
+    
+    921  => [:magic,:buff,'Fire Weapon'], #check
+    924  => [:magic,:buff,'Fire Charge'], #check
+    
+    931  => [:special,:thief,'Health'],
+    932  => [:special,:thief,'Consciousness'],
+    933  => [:special,:thief,'Freedom'],
+    934  => [:special,:thief,'Memory'],
+    
     #Most specials for certain characters will look weird with other characters due to missing
     #animation frames
     1011 => [:special,:adell,'Crimson Flame'],
@@ -72,6 +98,12 @@ class WeaponSkill
     #1063
     #1071
     #1072
+    
+    1301 => [:special,:raspberyl,'D-Rule 1: Morality'],
+    1302 => [:special,:raspberyl,'D-Rule 2: Volunteer'],
+    1303 => [:special,:raspberyl,'D-Rule 3: EcoFriend'],
+    1305 => [:magichange,:raspberyl,'Imperial Cross'],
+    1306 => [:magichange,:raspberyl,'Delta Extreme'],
     
     2125 => [:special,:mothman,'Mothman Shot'],
     2121 => [:special,:mothman,'Hell Pollen'],
