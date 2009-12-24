@@ -22,10 +22,6 @@ module Structure
             total_size += struct[0].struct_size * struct[1].abs
           end
           
-          #else
-          #  unchecked << name
-          #end
-          
           self.struct_order << name
           self.structs[name] = struct
           define_method("#{name}_struct") do
@@ -39,9 +35,6 @@ module Structure
             struct.respond_to?(:value) ? struct.value : struct
           end
           define_method("#{name}=") do |new_value|
-            #if new_value.respond_to?(:value)
-            #  new_value = new_value.value
-            #end
             if self.struct_values[name].respond_to?(:value)
               self.struct_values[name].value = new_value
             else
@@ -54,9 +47,7 @@ module Structure
           define_method(:struct_size) do
             total_size
           end
-        end
-        
-        puts "#{self.name} - #{total_size} - #{unchecked.inspect}"
+        end        
       end
       
       extend  ClassMethods

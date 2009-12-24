@@ -3,9 +3,9 @@ class Characters < Array
   START_AT = 3288
   
   def self.struct_count; 128; end
-  #def self.struct_size
-  #  Character.struct_size * struct_count
-  #end
+  def self.struct_size
+    Character.struct_size * struct_count
+  end
   
   def disassemble(file)
     #file.seek(START_AT)
