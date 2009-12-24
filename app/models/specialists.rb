@@ -1,9 +1,9 @@
-require 'specialist'
+#require 'specialist'
 class Specialists < Array 
   def self.struct_count; 8; end
-  def self.struct_size
-    Specialist.struct_size * 8
-  end
+ # def self.struct_size
+#    Specialist.struct_size * 8
+ # end
    
   def disassemble(file)
     self.class.struct_count.times do

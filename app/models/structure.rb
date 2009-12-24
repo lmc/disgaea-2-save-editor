@@ -18,8 +18,10 @@ module Structure
           end
           struct[0] = class_from_symbol(struct[0])
           
-          #if struct[0].respond_to?(:struct_size)
-            total_size += struct[0].struct_size
+          if struct[0].respond_to?(:struct_size)
+            total_size += struct[0].struct_size * struct[1].abs
+          end
+          
           #else
           #  unchecked << name
           #end
@@ -37,6 +39,9 @@ module Structure
             struct.respond_to?(:value) ? struct.value : struct
           end
           define_method("#{name}=") do |new_value|
+            #if new_value.respond_to?(:value)
+            #  new_value = new_value.value
+            #end
             if self.struct_values[name].respond_to?(:value)
               self.struct_values[name].value = new_value
             else
@@ -44,6 +49,7 @@ module Structure
             end
           end
         end
+        
         metaclass.instance_eval do
           define_method(:struct_size) do
             total_size
