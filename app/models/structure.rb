@@ -9,12 +9,21 @@ module Structure
       end
       
       def self.structure(*args)
+        total_size = 0
+        unchecked = []
         args.each do |structure_list|
           name,struct = *structure_list
           unless struct.is_a?(Array)
             struct = [struct,-1]
           end
           struct[0] = class_from_symbol(struct[0])
+          
+          #if struct[0].respond_to?(:struct_size)
+            total_size += struct[0].struct_size
+          #else
+          #  unchecked << name
+          #end
+          
           self.struct_order << name
           self.structs[name] = struct
           define_method("#{name}_struct") do
@@ -35,6 +44,13 @@ module Structure
             end
           end
         end
+        metaclass.instance_eval do
+          define_method(:struct_size) do
+            total_size
+          end
+        end
+        
+        puts "#{self.name} - #{total_size} - #{unchecked.inspect}"
       end
       
       extend  ClassMethods

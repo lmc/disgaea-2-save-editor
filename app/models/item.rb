@@ -1,7 +1,7 @@
 class Item < BaseData
   include Structure
   
-  SIZE = 256
+  #SIZE = 256
   #7224 = start of name
   #7296 = end of item?
   

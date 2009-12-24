@@ -11,4 +11,3 @@ class SaveStructure < BaseData
     [:unknown03,  [:unknown,(543072 - 393216 - 7040 - (256 * 4) - (256 * 24) - (256 * 512))]]
   )
 end
-334744
