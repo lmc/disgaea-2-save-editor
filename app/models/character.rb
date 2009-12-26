@@ -3,6 +3,8 @@ class Character < BaseData
   SIZE = 3072
   attr_accessor :parent_position #so we know where we sit in the characters array
   
+  validates_numericality_of :experience
+  
   structure(
     [:experience,         :uint64],
     [:items,              CharacterItems],

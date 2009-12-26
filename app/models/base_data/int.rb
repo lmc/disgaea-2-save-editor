@@ -10,7 +10,7 @@ class BaseData::Int < BaseData::Base
   end
   
   def value=(new_value)
-    super(validate_and_limit(new_value))
+    super(validate_and_limit(new_value.to_i))
   end
   
 end

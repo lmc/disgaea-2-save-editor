@@ -26,6 +26,8 @@ Rails::Initializer.run do |config|
   
   config.gem 'inherited_resources', :source => gemcutter_url
   config.gem 'formtastic',          :source => gemcutter_url
+  
+  config.gem 'validatable'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

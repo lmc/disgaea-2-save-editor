@@ -1,12 +1,8 @@
-#module ActiveRecord; end
-#class ActiveRecord::Base; end
-#class ActiveRecord::ActiveRecordError < StandardError; end
-
 module FakeActiveRecord
   def self.included(base)
     base.send(:include,InstanceMethods)
     base.send(:extend, ClassMethods)
-    #base.send(:include,ActiveRecord::Validations)
+    base.send(:include,Validatable)
   end
   
   module ClassMethods
@@ -27,6 +23,18 @@ module FakeActiveRecord
     def new_record?
       false
     end
+    
+    def update_attributes(attributes = {})
+      attributes.each_pair do |key,value|
+        assign_method = "#{key}="
+        raise(ArgumentError, "No attribute setter #{assign_method}") unless respond_to?(assign_method)
+        send(assign_method,value)
+      end
+      valid?
+    end
   end
-  
+end
+
+class Validatable::Errors
+  alias_method :[], :on
 end

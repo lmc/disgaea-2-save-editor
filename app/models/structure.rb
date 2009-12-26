@@ -8,6 +8,8 @@ module Structure
         attr_accessor :struct_order, :structs
       end
       
+      
+      #TODO: Lazy loading
       def self.structure(*args)
         total_size = 0
         unchecked = []

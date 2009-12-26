@@ -3,4 +3,9 @@
   %head
     %title Disgaea 2 Save Editor
     = stylesheet_link_tag 'compiled/application'
-  %body= yield
+  %body
+    - if flash.size > 0
+      #flashes
+        - flash.each_pair do |key,value|
+          #flash{:id => key}= value
+    = yield

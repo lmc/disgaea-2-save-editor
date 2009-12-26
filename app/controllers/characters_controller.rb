@@ -1,6 +1,10 @@
 class CharactersController < InheritedResources::Base
   actions :index, :edit, :update
   
+  def update
+    update! { edit_character_path(@character) }
+  end
+  
   
   protected
   
