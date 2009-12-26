@@ -79,6 +79,20 @@ module Structure
       end
       names
     end
+    
+    def offset_for(struct_name,offset_in_array_struct = nil)
+      position_of_struct = struct_order.index(struct_name)
+      offset = 0
+      struct_order[0...position_of_struct].each do |i_struct_name|
+        i_struct = structs[i_struct_name]
+        offset += i_struct[0].struct_size * i_struct[1].abs
+      end
+      if offset_in_array_struct
+        size_of_struct = structs[struct_name][0].struct_size
+        offset += offset_in_array_struct * size_of_struct
+      end
+      offset
+    end
 
     def class_from_symbol(symbol)
       if symbol.is_a?(Symbol)

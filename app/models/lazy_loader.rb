@@ -49,7 +49,10 @@ class LazyLoader
   end
   
   def position_to_seek_to
-    
+    position = 0
+    parent_structs[1..-1].each do |parent| #skip the first, since it's not actually a struct
+      
+    end
   end
   
 end
