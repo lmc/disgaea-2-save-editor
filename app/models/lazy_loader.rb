@@ -1,8 +1,9 @@
 class LazyLoader
   attr_accessor :parent_struct, :struct, :offset
-  attr_accessor :instance
+  attr_accessor :no_longer_lazy
   def initialize(parent_struct,struct,offset = nil)
     self.parent_struct, self.struct, self.offset = parent_struct, struct, offset
+    self.no_longer_lazy = {}
   end
   
   def is_array?
@@ -18,8 +19,15 @@ class LazyLoader
     (DEFAULT_LAZY_METHODS + struct_class.array_structs).include?(method)
   end
   
+  def [](key)
+    no_longer_lazy[key] || method_missing(:[],key)
+  end
+  def []=(key,value)
+    no_longer_lazy[key] = value
+  end
+  
   def method_missing(method,*args,&block)
-    if lazy_method?(method) && !self.instance
+    if lazy_method?(method)# && !self.instance
       new_offset = method
       unless struct[1] == -1
         new_offset = args.first
@@ -31,8 +39,9 @@ class LazyLoader
       end
       LazyLoader.new(self,new_struct,new_offset)
     else
-      disassemble unless self.instance
-      self.instance.send(method,*args,&block)
+      instance = disassemble
+      #parent_struct[self.offset] = instance #we're no longer lazy, since we've been disassembled
+      instance.send(method,*args,&block)
     end
   end
   
@@ -40,9 +49,9 @@ class LazyLoader
     puts "disassembling"
     file = root_object.open
     file.seek(position_to_seek_to)
-    self.instance = struct_class.new
-    self.instance.disassemble(file)
-    self.instance
+    instance = struct_class.new
+    instance.disassemble(file)
+    instance
   end
   
   def parent_structs
