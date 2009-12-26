@@ -1,5 +1,6 @@
 class LazyLoader
   attr_accessor :parent_struct, :struct, :offset
+  attr_accessor :instance
   def initialize(parent_struct,struct,offset = nil)
     self.parent_struct, self.struct, self.offset = parent_struct, struct, offset
   end
@@ -18,7 +19,7 @@ class LazyLoader
   end
   
   def method_missing(method,*args,&block)
-    if lazy_method?(method)
+    if lazy_method?(method) && !self.instance
       new_offset = method
       unless struct[1] == -1
         new_offset = args.first
@@ -30,10 +31,18 @@ class LazyLoader
       end
       LazyLoader.new(self,new_struct,new_offset)
     else
-      instance = struct_class.new
-      debugger
-      'sdf'
+      disassemble unless self.instance
+      self.instance.send(method,*args,&block)
     end
+  end
+  
+  def disassemble
+    puts "disassembling"
+    file = root_object.open
+    file.seek(position_to_seek_to)
+    self.instance = struct_class.new
+    self.instance.disassemble(file)
+    self.instance
   end
   
   def parent_structs
