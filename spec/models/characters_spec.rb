@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe Characters do
+describe 'Characters' do
   
   before do
     @file = File.open(RAILS_ROOT+'/spec/fixtures/full_save.bin')
