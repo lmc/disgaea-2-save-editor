@@ -1,4 +1,5 @@
 class BaseData::StringCollection < BaseData::Base
+  attr_accessor :parent_struct
   attr_accessor :strings
   delegate :[],:size, :to => :strings
   

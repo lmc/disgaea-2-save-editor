@@ -1,4 +1,5 @@
 class BaseData::Base
+  attr_accessor :parent_struct
   def self.struct_size; nil; end
   
   attr_accessor :value

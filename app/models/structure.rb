@@ -38,8 +38,6 @@ module Structure
           
           struct += [start_pos,end_pos]
           
-          puts "#{self.name}-#{name} = #{struct.inspect}"
-          
           define_method("#{name}_struct") do
             self.struct_values[name]
           end

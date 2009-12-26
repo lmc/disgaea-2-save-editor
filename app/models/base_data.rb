@@ -34,10 +34,20 @@ class BaseData
     file
   end
   
+  attr_accessor :parent_struct
+  def self.add_parent_struct(instance,parent_struct)
+    if instance.respond_to?(:parent_struct=)
+      instance.parent_struct = parent_struct
+    else
+      raise "no parent_struct= on #{instance.inspect}"
+    end
+  end
+  
   def disassemble(file)
     self.class.struct_order.each do |struct_name|
       klass,count = *self.class.structs[struct_name]
       values = parse_normal(file,klass,count)
+      self.class.add_parent_struct(values,self)
       if respond_to?("#{struct_name}=")
         self.send("#{struct_name}=",values)
       else
@@ -48,13 +58,14 @@ class BaseData
   end
   
   def parse_normal(file,klass,count)
-    values = []
+    values = StructArray.new
     #FIXME: ugly
     #-1 means no count was specified, assume we only want ONE of these, as opposed to [count] in an array
     if count >= 0
       count.times do
         value = klass.new
         value.disassemble(file)
+        self.class.add_parent_struct(value,values)
         values << value
       end
       if klass == BaseData::PlainString
