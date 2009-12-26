@@ -12,7 +12,6 @@ describe Item do
   end
   
   it "should have specialists" do
-    @item.specialists.should be_an_instance_of Specialists
     @item.should have(8).specialists
   end
   

@@ -15,14 +15,6 @@ class BaseData
     struct_values.map { |key,value| [key,value.value] }
   end
   
-  def self.assemble(ruby_value)
-    
-  end
-  
-  def self.disassemble(raw_value)
-    
-  end
-  
   #FIXME: These are way too closely coupled and are doing too much magic. Refactor the whole lot once it's working.
   def assemble(file)
     self.class.struct_order.each do |struct_name|

@@ -4,15 +4,22 @@ module Structure
     base.instance_eval do
       @struct_order ||= []
       @structs      ||= {}
+      @structure_root = false
+      #@struct_start   = 0
+      #@struct_end     = 0
       class << self
-        attr_accessor :struct_order, :structs
+        attr_accessor :struct_order, :structs, :structure_root
       end
-      
+      #attr_accessor :struct_start, :struct_end
       
       #TODO: Lazy loading
+      
+      def self.structure_root!
+        self.structure_root = true
+      end
+      
       def self.structure(*args)
         total_size = 0
-        unchecked = []
         args.each do |structure_list|
           name,struct = *structure_list
           unless struct.is_a?(Array)
@@ -20,12 +27,19 @@ module Structure
           end
           struct[0] = class_from_symbol(struct[0])
           
+          start_pos = total_size
           if struct[0].respond_to?(:struct_size)
             total_size += struct[0].struct_size * struct[1].abs
           end
+          end_pos = total_size
           
           self.struct_order << name
           self.structs[name] = struct
+          
+          struct += [start_pos,end_pos]
+          
+          puts "#{self.name}-#{name} = #{struct.inspect}"
+          
           define_method("#{name}_struct") do
             self.struct_values[name]
           end

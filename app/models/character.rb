@@ -7,7 +7,7 @@ class Character < BaseData
   
   structure(
     [:experience,         :uint64],
-    [:items,              CharacterItems],
+    [:items,              [Item,4]],
     [:name,               [:disgaea_string,41]], #FIXME: Story characters seem to use a string-table id
     [:class_name,         [:string,61]],
     [:tunknown,           [:unknown,138]],

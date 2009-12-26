@@ -6,7 +6,7 @@ class Item < BaseData
   #7296 = end of item?
   
   structure(
-    [:specialists,          Specialists],
+    [:specialists,          [Specialist,8]],
     [:unknown01,            [:unknown,8]],
     [:stats,                Stats],
     [:base_stats,           Stats],
