@@ -46,6 +46,7 @@ module Structure
           end
           define_method("#{name}") do
             struct = self.struct_values[name]
+            struct ||= LazyLoader.new(self,self.class.structs[name])
             struct.respond_to?(:value) ? struct.value : struct
           end
           define_method("#{name}=") do |new_value|
@@ -70,6 +71,14 @@ module Structure
   end
   
   module ClassMethods
+    
+    def array_structs
+      names = []
+      structs.each_pair do |name,struct|
+        names << name if struct[1] >= 0 && !struct[0].ancestors.include?(BaseData::PlainString)
+      end
+      names
+    end
 
     def class_from_symbol(symbol)
       if symbol.is_a?(Symbol)

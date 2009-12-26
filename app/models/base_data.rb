@@ -43,6 +43,10 @@ class BaseData
     end
   end
   
+  def struct_position
+    
+  end
+  
   def disassemble(file)
     self.class.struct_order.each do |struct_name|
       klass,count = *self.class.structs[struct_name]
