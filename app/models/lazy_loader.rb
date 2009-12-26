@@ -4,6 +4,10 @@ class LazyLoader
     self.parent_struct, self.struct, self.offset = parent_struct, struct, offset
   end
   
+  def is_array?
+    !parent_struct.offset.is_a?(Symbol)
+  end
+  
   def struct_class
     struct[0]
   end
@@ -15,7 +19,7 @@ class LazyLoader
   
   def method_missing(method,*args,&block)
     if lazy_method?(method)
-      new_offset = nil
+      new_offset = method
       unless struct[1] == -1
         new_offset = args.first
       end
@@ -50,9 +54,20 @@ class LazyLoader
   
   def position_to_seek_to
     position = 0
-    parent_structs[1..-1].each do |parent| #skip the first, since it's not actually a struct
-      
+    offsets_and_awfulness = [parent_structs[2..-1],self].flatten.select { |p| p.respond_to?(:offset) }.map(&:offset)
+    args_for_offset_for = []
+    offsets_and_awfulness.each do |arg|
+      if arg.is_a?(Symbol)
+        args_for_offset_for << [arg]
+      else
+        args_for_offset_for.last << arg
+      end
     end
+    args_for_offset_for.each_with_index do |arg_set,index|
+      index += 1
+      position += parent_structs[index].struct_class.offset_for(*arg_set)
+    end
+    position
   end
   
 end
