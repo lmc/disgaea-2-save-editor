@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
   
   def current_disassembled
-    @current_disassembled ||= current_save.disassemble
+    @current_disassembled ||= current_save.structures
     @current_disassembled
   end
   

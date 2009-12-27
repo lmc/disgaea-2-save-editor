@@ -1,6 +1,9 @@
 class LazyLoader
+  DEFAULT_LAZY_METHODS = [:[]]
+  
   attr_accessor :parent_struct, :struct, :offset
   attr_accessor :already_lazy, :no_longer_lazy
+  
   def initialize(parent_struct,struct,offset = nil)
     self.parent_struct, self.struct, self.offset = parent_struct, struct, offset
     self.already_lazy = {}
@@ -11,11 +14,14 @@ class LazyLoader
     !parent_struct.offset.is_a?(Symbol)
   end
   
+  def class
+    struct[0]
+  end
+  
   def struct_class
     struct[0]
   end
   
-  DEFAULT_LAZY_METHODS = [:[]]
   def lazy_method?(method)
     (DEFAULT_LAZY_METHODS + struct_class.array_structs).include?(method)
   end
@@ -27,9 +33,20 @@ class LazyLoader
     no_longer_lazy[key] = value
   end
   
+  def size
+    struct[1]
+  end
+  
+  def to_param
+    #instance ? send_on_instance(:to_param) : "#{offset}"
+    "#{offset}"
+  end
+  
+  attr_accessor :instance
   def method_missing(method,*args,&block)
     return already_lazy[method] if already_lazy[method]
-    if lazy_method?(method)# && !self.instance
+    return send_on_instance(method,*args,&block) if self.instance
+    if lazy_method?(method)
       new_offset = method
       unless struct[1] == -1
         new_offset = args.first
@@ -42,19 +59,33 @@ class LazyLoader
       self.already_lazy[method] = LazyLoader.new(self,new_struct,new_offset)
       self.already_lazy[method]
     else
-      instance = disassemble
-      parent_struct[self.offset] = instance #we're no longer lazy, since we've been disassembled
-      instance.send(method,*args,&block)
+      self.instance = disassemble
+      parent_struct[self.offset] = self.instance #we're no longer lazy, since we've been disassembled
+      send_on_instance(method,*args,&block)
     end
   end
   
+  def send_on_instance(method,*args,&block)
+    self.instance.send(method,*args,&block)
+  end
+  
   def disassemble
-    #puts "disassembling"
     file = root_object.open
     file.seek(position_to_seek_to)
-    instance = struct_class.new
-    instance.disassemble(file)
-    instance
+    if is_array?
+      instance = []
+      struct[1].times do |index|
+        item = struct_class.new
+        item.disassemble(file)
+        item.parent_position = index
+        instance << item
+      end
+      instance
+    else
+      instance = struct_class.new
+      instance.disassemble(file)
+      instance
+    end
   end
   
   def parent_structs
