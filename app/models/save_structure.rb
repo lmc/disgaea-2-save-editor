@@ -6,6 +6,7 @@ class SaveStructure < BaseData
     [:unknown01,        [:unknown,3239]],
     [:characters,       [Character,128]], #3072 x 128
     [:unknown02,        [:unknown,7040]],
+    #senators seem to start right here
     [:wtf_items,        [Item,4]], #wtf, there's 4 mystery items at the start of the array here
     [:pack_items,       [Item,24]],
     [:warehouse_items,  [Item,512]],

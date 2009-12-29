@@ -1,7 +1,7 @@
 class BaseData::DisgaeaStringCollection < BaseData::StringCollection
   
   def as_raw
-    str = BaseData::DisgaeaString.untranslate(value).join
+    str = BaseData::DisgaeaString.untranslate(value)
     str[0...(strings.size)] #only the original size of our string
   end
   

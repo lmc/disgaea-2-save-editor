@@ -23,8 +23,8 @@ class BaseData::UnknownCollection < BaseData::StringCollection
   def as_int16(offset = 0,unsigned = false)
     int8s = as_int8
     offset.times { int8s.shift }
+    klass = unsigned ? BaseData::Uint16 : BaseData::Int16
     int8s.in_groups_of(2).map do |args|
-      klass = unsigned ? BaseData::Uint16 : BaseData::Int16
       klass.new.convert(args.compact.map(&:chr).join)
     end
   end
@@ -33,11 +33,12 @@ class BaseData::UnknownCollection < BaseData::StringCollection
     as_int16(offset,true)
   end
   
-  def as_int32(offset = 0)
+  def as_int32(offset = 0,unsigned = false)
     int8s = as_int8
     offset.times { int8s.shift }
+    klass = unsigned ? BaseData::Uint32 : BaseData::Int32
     int8s.in_groups_of(4).map do |args|
-      BaseData::Int32.new.convert(args.compact.map(&:chr).join)
+      klass.new.convert(args.compact.map(&:chr).join)
     end
   end
   

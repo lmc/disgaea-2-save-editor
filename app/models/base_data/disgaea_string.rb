@@ -6,8 +6,31 @@ class BaseData::DisgaeaString < BaseData::PlainString
   TRANSLATIONS = {
     64  => ' ',
     70  => ':',
-    124 => '-'
+    124 => '-',
+    #TODO: Find these
+    -1  => "'",
+    -1  => '+',
+    -1  => '!',
+    -1  => '?',
+    -1  => '%',
+    -1  => '&',
+    -1  => '(heart)',
+    -1  => '.',
+    -1  => '(bullet)',
+    -1  => '/',
+    -1  => '~',
+    -1  => '(',
+    -1  => ')',
+    -1  => '<',
+    -1  => '>'
   }
+  
+  ALLOWABLE_CHARACTERS = [
+    ('a'..'z').to_a,
+    ('A'..'Z').to_a,
+    ('0'..'9').to_a,
+    TRANSLATIONS.values
+  ].flatten.freeze
   
   def self.translate_char(disgaea_char)
     case disgaea_char[0].ord #first character's numeral
@@ -44,7 +67,7 @@ class BaseData::DisgaeaString < BaseData::PlainString
   def self.untranslate(string)
     string.bytes.to_a.map(&:chr).map do |char|
       untranslate_char(char)
-    end
+    end.join
   end
   
   

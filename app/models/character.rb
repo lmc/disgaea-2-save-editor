@@ -5,6 +5,14 @@ class Character < BaseData
   
   validates_numericality_of :experience
   
+  #Need to find:
+  #Magichange 2 enabled
+  #teacher id
+  #character class id
+  #character colour id
+  #base counter/mv (or the +1 flags from dark assembly "More counters/More movement" bills)
+  #reincarnation count
+  #stored levels
   structure(
     [:experience,         :uint64],
     [:items,              [Item,4]],
@@ -12,16 +20,17 @@ class Character < BaseData
     [:class_name,         [:string,61]],
     [:tunknown,           [:unknown,138]],
     
-    #NOTE!: Weapon skills are not nessecarily stored in the order they're displayed
     [:weapon_skills,      WeaponSkills],
-    #Maybe some stuff in uunknown controls the order?
-    [:uunknown,           [:unknown,448]],
+    #Some stupid way of ordering the weapon skills, not exactly sure how it works
+    [:weapon_skills_order_1,[:int16,112]],
+    [:weapon_skills_order_2,[:int16,112]],
     
     [:weapon_skill_count, :int32],
+    
     [:current_hp,         :int32],
     [:current_sp,         :int32],
-    [:stats,              Stats], #calculated stats?
-    [:base_stats_maybe,   Stats], #intrinsic (naked) stats?
+    [:stats,              Stats], #calculated stats, recalculated often, according to naked_stats, equipped items, pupils, etc.
+    [:naked_stats,        Stats], #intrinsic (naked) stats
     [:unknown02,          [:unknown,32]],
     [:mana,               :uint32],
     [:unknown03,          [:unknown,10]], #seems to be int16s. only on kyoko and miki, something related to pupils?

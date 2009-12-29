@@ -8,7 +8,17 @@
     = f.input :mana
     = f.input :felonies_total
     = f.input :felonies_displayed
-    -# active stats (TODO: check how to do fields_for with formtastic)
-    -# naked stats
+  - f.semantic_fields_for :naked_stats,@character.naked_stats do |ff|
+    - ff.inputs :label => 'Naked stats' do
+      = ff.input :hp
+      = ff.input :sp
+      = ff.input :atk
+      = ff.input :def
+      = ff.input :int
+      = ff.input :res
+      = ff.input :hit
+      = ff.input :spd
+  - f.inputs do
+    %li= link_to 'Edit weapon skills', character_weapon_skills_path(f.object)
   - f.buttons do
     = f.commit_button

@@ -17,7 +17,7 @@ class Save < BaseData
   
   def disassemble
     open
-    #self.structures = SaveStructure.new.disassemble(file)
+    self.structures = SaveStructure.new.disassemble(file)
     #self.header = self.structures.header
     #self.characters = self.structures.characters
     self

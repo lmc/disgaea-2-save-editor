@@ -77,7 +77,7 @@ class LazyLoader
       struct[1].times do |index|
         item = struct_class.new
         item.disassemble(file)
-        item.parent_position = index
+        item.parent_position = index if item.respond_to?(:parent_position=)
         instance << item
       end
       instance
