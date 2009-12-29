@@ -6,11 +6,6 @@ class Character < BaseData
   validates_numericality_of :experience
   
   #Need to find:
-  #Magichange 2 enabled
-  #teacher id
-  #character class id
-  #character colour id
-  #base counter/mv (or the +1 flags from dark assembly "More counters/More movement" bills)
   #reincarnation count
   #stored levels
   structure(
@@ -47,7 +42,6 @@ class Character < BaseData
     [:felonies_displayed, :int16],
     [:base_element_stats, ElementalStats],
     [:element_stats,      ElementalStats],
-    #[:unknown06,          [:unknown,368]]
     [:base_jmp,           :int8],
     [:jmp,                :int8],
     [:base_mv,            :int8],
@@ -57,11 +51,18 @@ class Character < BaseData
     [:gender,             :int8], #not sure, looks it though. 1 = male, 2 = female
     [:unknown07,          [:unknown,1]],
     [:rank_colour,        :int8], #TEST: changed when painted
-    #[:unknown06,          [:unknown,359]]
     [:unknown08,          [:unknown,8]],
     [:class_id,           :int8], #whether a lady samurai, magic knight, etc.
     [:class_rank,         :int8], #what rank of class
-    [:unknown06,          [:unknown,349]]
+    [:unknown06,          [:unknown,3]], #Last int8 = character name type? 1 = completely custom, 2 = randomly-selected name, 3 = storyline name?
+    [:teacher_id,         :int8], #the character with the matching id_as_teacher, is this student's teacher. 255 = no teacher
+    [:id_as_teacher,      :int8],
+    #[:unknown09,          [:unknown,61]],
+    [:unknown09,          [:unknown,46]],
+    [:class_id_unknown,   :int8], #something unique for each character class. initial string table id?
+    [:unknown11,          [:unknown,14]],
+    [:magichange_2,       :int8],
+    [:unknown10,          [:unknown,282]]
   )
   
   #FIXME: Find out 'official' names (game uses rank 1 names, not proper class names)
