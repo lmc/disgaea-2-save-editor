@@ -56,8 +56,42 @@ class Character < BaseData
     [:counter,            :int8],
     [:gender,             :int8], #not sure, looks it though. 1 = male, 2 = female
     [:unknown07,          [:unknown,1]],
-    [:rank_colour,        :int8], #changed when painted
-    [:unknown06,          [:unknown,359]]
+    [:rank_colour,        :int8], #TEST: changed when painted
+    #[:unknown06,          [:unknown,359]]
+    [:unknown08,          [:unknown,8]],
+    [:class_id,           :int8], #whether a lady samurai, magic knight, etc.
+    [:class_rank,         :int8], #what rank of class
+    [:unknown06,          [:unknown,349]]
   )
+  
+  #FIXME: Find out 'official' names (game uses rank 1 names, not proper class names)
+  CLASS_IDS = {
+    1  => :adell,
+    2  => :rozalin,
+    
+    11 => :tink,
+    12 => :hanako,
+    
+    26 => :raspberyl,
+    
+    40 => :fighter,
+    41 => :lady_fighter,
+    43 => :mage,
+    44 => :lady_mage,
+    45 => :ninja,#
+    46 => :lady_ninja,#
+    47 => :maijin, #
+    48 => :heavy_knight,#
+    49 => :sinnner, #
+    50 => :geo_guy, #
+    51 => :samurai,
+    52 => :gunner, #
+    53 => :thief,
+    54 => :healer,
+    55 => :archer, #
+    56 => :beast_tamer, #
+    57 => :magic_knight,
+    58 => :lady_samurai
+  }
 
 end
