@@ -17,7 +17,8 @@ class WeaponMastery < BaseData
     [:bow,    :int8],
     [:gun,    :int8],
     [:axe,    :int8],
-    [:staff,  :int8]
+    [:staff,  :int8],
+    [:padding,:int8] #seems to be 0 all the time
   )
 
 end

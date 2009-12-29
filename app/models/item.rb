@@ -15,7 +15,7 @@ class Item < BaseData
     [:level,                :int8], #true, effective level
     [:item_world_level_max, :int8],
     [:unknown03,            [:unknown,2]],
-    [:text_colour,          :int8], #3 = gold, #2 = green, 1 = normal
+    [:weapon_colour,        :int8], #actually used to control the colours (ie. legendary excalibur is red, value 3) normal = 1
     [:unknown04,            [:unknown,3]], #maybe int8s, related to item world levels?
     [:item_world_level,     :int8], #how many item world levels cleared
     [:unknown05,            [:unknown,5]],
