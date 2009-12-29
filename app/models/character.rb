@@ -33,18 +33,31 @@ class Character < BaseData
     [:naked_stats,        Stats], #intrinsic (naked) stats
     [:unknown02,          [:unknown,32]],
     [:mana,               :uint32],
-    [:unknown03,          [:unknown,10]], #seems to be int16s. only on kyoko and miki, something related to pupils?
-    [:weapon_unknown,     WeaponMastery], #seems to mirror weapon_grade, somewhat. effective grade, changed by weapon scrolls? 
-    [:weapon_grade,       WeaponMastery], #the A/B/C/D/E grades given on the weapon mastery screen
+    [:unknown03,          [:unknown,16]], #int16s, something related to pupils? stat bonuses?
+    [:eunknown,           [:unknown,8]],
     [:weapon_mastery,     WeaponMastery],
-    [:unknown04,          [:unknown,17]], #just seems to be more repeating values, related to weapon skills?
+    [:weapon_pad_01,      :int8],
+    [:weapon_grade,       WeaponMastery], #adjusted for scrolls
+    [:weapon_pad_02,      :int8],
+    [:base_weapon_grade,  WeaponMastery],
+    [:weapon_pad_03,      :int8],
     [:basic_stats,        BasicStats],
     [:unknown05,          [:unknown,22]],
     [:felonies_total,     :int16],
     [:felonies_displayed, :int16],
     [:base_element_stats, ElementalStats],
     [:element_stats,      ElementalStats],
-    [:unknown06,          [:unknown,368]]
+    #[:unknown06,          [:unknown,368]]
+    [:base_jmp,           :int8],
+    [:jmp,                :int8],
+    [:base_mv,            :int8],
+    [:mv,                 :int8],
+    [:base_counter,       :int8],
+    [:counter,            :int8],
+    [:gender,             :int8], #not sure, looks it though. 1 = male, 2 = female
+    [:unknown07,          [:unknown,1]],
+    [:rank_colour,        :int8], #changed when painted
+    [:unknown06,          [:unknown,359]]
   )
 
 end
