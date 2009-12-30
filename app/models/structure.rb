@@ -105,7 +105,13 @@ module Structure
   end
   
   module InstanceMethods
-    
+    def struct_values_in_order
+      values = []
+      self.class.struct_order.each do |method|
+        values << send(method)
+      end
+      values
+    end
   end
   
 end
