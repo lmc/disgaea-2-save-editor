@@ -7,7 +7,8 @@ class SaveStructure < BaseData
     [:characters,       [Character,128]], #3072 x 128
     #[:unknown02,        [:unknown,7040]],
     [:senators,         [Senator,64]],
-    [:unknown02,        [:unknown,4096]],
+    [:maps,             [Map,219]],
+    [:unknown02,        [:unknown,592]], #unlocked maps: ends at ~1750x2
     #senators seem to start right here
     [:wtf_items,        [Item,4]], #wtf, there's 4 mystery items at the start of the array here
     [:pack_items,       [Item,24]],
