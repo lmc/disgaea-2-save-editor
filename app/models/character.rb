@@ -65,8 +65,8 @@ class Character < BaseData
   )
   
   GENDERS = {
-    :male   => 1,
-    :female => 2
+    1 => :male,
+    2 => :female
   }
   
   #FIXME: Find out 'official' names (game uses rank 1 names, not proper class names)
@@ -97,6 +97,13 @@ class Character < BaseData
     56 => :beast_tamer, #
     57 => :magic_knight,
     58 => :lady_samurai
+  }
+  
+  RANK_IDS = {
+    55 => [:archer,:hunter],
+    56 => [:beast_tamer],
+    57 => [:magic_knight,:dark_knight,:rune_knight],
+    58 => [:exorcist,:diabolist]
   }
 
 end
