@@ -2,6 +2,8 @@
 - semantic_form_for @item, :url => resource_path do |f|
   - f.inputs do
     = f.input :name, :input_html => { :class => 'long' }
+    = f.input :item_rank
+    = f.input :rarity
     
   - f.inputs :name => 'Levels' do |ff|
     = f.input :level
@@ -18,6 +20,8 @@
     = f.input :population
     = f.input :mv
     = f.input :jmp
+    = f.input :critical_chance
+    = f.input :range
     
   - f.inputs :name => 'Stats', :for => [:stats,f.object.stats] do |ff|
     %p Maybe be overridden when stats are recalculated (specialists added/removed, level up, etc.)
