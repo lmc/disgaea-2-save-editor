@@ -1,12 +1,23 @@
 %h1 Edit Item:
 - semantic_form_for @item, :url => resource_path do |f|
   - f.inputs do
-    = f.input :name
+    = f.input :name, :input_html => { :class => 'long' }
     
   - f.inputs :name => 'Levels' do |ff|
     = f.input :level
     = f.input :item_world_level_max
     = f.input :item_world_level
+    
+  - f.inputs :name => 'Class/Appearance' do |ff|
+    = f.input :item_class_id
+    = f.input :weapon_colour
+    = f.input :rarity_badge
+    
+  - f.inputs :name => 'Misc.' do |ff|
+    = f.input :rarity
+    = f.input :population
+    = f.input :mv
+    = f.input :jmp
     
   - f.inputs :name => 'Stats', :for => [:stats,f.object.stats] do |ff|
     %p Maybe be overridden when stats are recalculated (specialists added/removed, level up, etc.)
