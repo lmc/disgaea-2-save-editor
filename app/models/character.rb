@@ -64,6 +64,11 @@ class Character < BaseData
     [:unknown10,              [:unknown,282]]
   )
   
+  GENDERS = {
+    :male   => 1,
+    :female => 2
+  }
+  
   #FIXME: Find out 'official' names (game uses rank 1 names, not proper class names)
   CLASS_IDS = {
     1  => :adell,

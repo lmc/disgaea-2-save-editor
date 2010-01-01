@@ -8,17 +8,34 @@
     = f.input :mana
     = f.input :felonies_total
     = f.input :felonies_displayed
-  - f.semantic_fields_for :naked_stats,@character.naked_stats do |ff|
-    - ff.inputs :label => 'Naked stats' do
-      = ff.input :hp
-      = ff.input :sp
-      = ff.input :atk
-      = ff.input :def
-      = ff.input :int
-      = ff.input :res
-      = ff.input :hit
-      = ff.input :spd
+    
+  - f.inputs :name => 'Naked stats', :for => [:naked_stats,@character.naked_stats] do |ff|
+    = render 'stats/edit', :form => ff
+    
+  - f.inputs :name => 'Basic stats', :for => [:basic_stats,@character.basic_stats] do |ff|
+    %p Set during character creation/reincarnation, used as the basis for stat gains on level up.
+    = render 'stats/edit', :form => ff
+    
+  - f.inputs :name => 'Base elemental stats', :for => [:base_element_stats,@character.base_element_stats] do |ff|
+    = render 'elemental_stats/edit', :form => ff
+    
+  - f.inputs :name => 'Misc.' do |ff|
+    = f.input :base_mv
+    = f.input :base_jmp
+    = f.input :base_counter
+    = f.input :flying_movement, :as => :boolean
+    = f.input :magichange_2, :as => :boolean
+    = f.input :gender, :as => :radio, :collection => Character::GENDERS
+    
+  - f.inputs :name => 'Weapon mastery', :for => [:weapon_mastery,@character.weapon_mastery] do |ff|
+    = render 'weapon_mastery/edit', :form => ff
+    
+  - f.inputs :name => 'Base weapon grade', :for => [:base_weapon_grade,@character.base_weapon_grade] do |ff|
+    = render 'weapon_mastery/edit', :form => ff
+    
   - f.inputs do
     %li= link_to 'Edit weapon skills', character_weapon_skills_path(f.object)
+    %li= link_to 'Edit items', character_items_path(f.object)
+    
   - f.buttons do
     = f.commit_button
