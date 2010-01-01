@@ -1,13 +1,12 @@
 %h1 Edit Character:
 - semantic_form_for @character do |f|
   - f.inputs do
-    = f.input :name
-    = f.input :class_name
+    = f.input :name, :input_html => { :class => 'long' }
+    = f.input :class_name, :input_html => { :class => 'long' }
     -# experience/level (TODO: calculate level from exp)
     = f.input :experience
     = f.input :mana
     = f.input :felonies_total
-    = f.input :felonies_displayed
     
   - f.inputs :name => 'Class/Appearance' do |ff|
     = f.input :class_id, :as => :select, :collection => Character::CLASS_IDS.invert

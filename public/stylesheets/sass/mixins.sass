@@ -1,0 +1,25 @@
+=branch_style_form(!left_width = 150px)
+  li
+    :margin-left= !left_width
+    :clear left
+    label
+      :float left
+      :width= !left_width
+      :text-align right
+      :margin-left= -!left_width
+  li.boolean
+    label
+      :width= !left_width + 20px
+    input
+      :display block
+      :float right
+  li.radio
+    ol
+      :margin-top -1.66em
+      li
+        :margin 0
+        :margin-right 2em
+      label
+        :float none
+        :width auto
+        :margin 0

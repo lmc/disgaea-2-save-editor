@@ -31,10 +31,15 @@ module FakeActiveRecord
     
     def update_attributes(attributes = {})
       attributes.each_pair do |key,value|
-        assign_method = "#{key}="
-        raise(ArgumentError, "No attribute setter #{assign_method}") unless respond_to?(assign_method)
-        send(assign_method,value)
+        if value.is_a?(Hash)
+          send(key).update_attributes(value)
+        else
+          assign_method = "#{key}="
+          raise(ArgumentError, "No attribute setter #{assign_method}") unless respond_to?(assign_method)
+          send(assign_method,value)
+        end
       end
+      debugger
       valid?
     end
   end

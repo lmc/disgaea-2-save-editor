@@ -1,8 +1,20 @@
 %h1 Edit Item:
-- debugger
 - semantic_form_for @item, :url => resource_path do |f|
   - f.inputs do
     = f.input :name
+    
+  - f.inputs :name => 'Levels' do |ff|
+    = f.input :level
+    = f.input :item_world_level_max
+    = f.input :item_world_level
+    
+  - f.inputs :name => 'Stats', :for => [:stats,f.object.stats] do |ff|
+    %p Maybe be overridden when stats are recalculated (specialists added/removed, level up, etc.)
+    = render 'stats/edit', :form => ff
+    
+  - f.inputs :name => 'Base stats', :for => [:base_stats,f.object.base_stats] do |ff|
+    %p Stats without specialists, Item General bonuses, etc.
+    = render 'stats/edit', :form => ff
     
   - f.buttons do
     = f.commit_button

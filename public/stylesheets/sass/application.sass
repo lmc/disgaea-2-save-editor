@@ -1,5 +1,30 @@
+@import mixins.sass
+@import blueprint/reset.sass
+
 table,th,td
   :border-left 1px #000 solid
   :border-top 1px #000 solid
 th,td
   :margin 0px
+  
+body
+  :font-family 'Helvetica', 'Arial', 'Tahoma', sans-serif
+  :font-size 12px
+  
+fieldset.inputs 
+  :margin 1em
+  
+  .string
+    input
+      :width 5.75em
+    input.long
+      :width 20em
+  
+  ol
+    :list-style none
+    +branch_style_form(200px)
+  li
+    :margin-top 0.2em
+    :height 1.8em
+  label
+    :font-size 1.5em
