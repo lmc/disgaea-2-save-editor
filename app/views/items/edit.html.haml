@@ -27,5 +27,8 @@
     %p Stats without specialists, Item General bonuses, etc.
     = render 'stats/edit', :form => ff
     
+  - f.inputs :name => "Unknown values" do |ff|
+    = unknown_fields_for(f)
+    
   - f.buttons do
     = f.commit_button
