@@ -17,7 +17,12 @@ module FakeActiveRecord
     end
     
     def id #to shut up depreciation warnings
-      respond_to?(:parent_position) ? parent_position : object_id
+      respond_to?(:parent_position) ? (parent_position || hack_parent_position) : object_id
+    end
+    
+    #FIXME: this is just a hack, since either the lazy loader or the disassembler aren't setting parent_position correctly
+    def hack_parent_position
+      parent_struct.index(self)
     end
     
     def new_record?

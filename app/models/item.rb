@@ -1,5 +1,6 @@
 class Item < BaseData
   include Structure
+  attr_accessor :parent_position #so we know where we sit in the characters array
   
   #SIZE = 256
   #7224 = start of name

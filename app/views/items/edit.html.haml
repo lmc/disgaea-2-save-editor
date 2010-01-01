@@ -1,0 +1,8 @@
+%h1 Edit Item:
+- debugger
+- semantic_form_for @item, :url => resource_path do |f|
+  - f.inputs do
+    = f.input :name
+    
+  - f.buttons do
+    = f.commit_button

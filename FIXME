@@ -1,4 +1,2 @@
-Save.new.disassemble.characters[1].items[0].name is fucked
-Storyline characters names must come from a string table index instead of the 'name' string
-
+General ugliness in LazyLoader/disassemble, refactor after first release
 Idea: Proxy objects to make it easier to get/set complex, interconnected stats, like character exp/level, specialist level/subdued status, etc.

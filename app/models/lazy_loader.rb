@@ -38,8 +38,11 @@ class LazyLoader
   end
   
   def to_param
-    #instance ? send_on_instance(:to_param) : "#{offset}"
     "#{offset}"
+  end
+  
+  def inspect
+    "#<LazyLoader>"
   end
   
   attr_accessor :instance

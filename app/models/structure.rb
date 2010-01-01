@@ -89,7 +89,7 @@ module Structure
       end
       if offset_in_array_struct
         size_of_struct = structs[struct_name][0].struct_size
-        offset += offset_in_array_struct * size_of_struct
+        offset += offset_in_array_struct.to_i * size_of_struct
       end
       offset
     end
