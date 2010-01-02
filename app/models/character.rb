@@ -46,7 +46,7 @@ class Character < BaseData
     [:gender,                 :int8], #not sure, looks it though. 1 = male, 2 = female
     [:unknown07,              [:unknown,1]],
     [:rank_colour,            :int8], #changed when painted (used in-battle, doesn't change portrait)
-    [:unknown08,              [:unknown,4]], #int32 = 16776970 on EVERYTHING. maybe a magic number to say this character is valid?
+    [:magic_number,           :int32], #int32 = 16776970 on EVERYTHING. maybe a magic number to say this character is valid?
     [:flying_movement,        :int8], #whether character can pass through enemies when moving
     [:equipped_weapon_range,  :int8], #set higher intrinsically for some monsters, usually 5 for guns, 2 for spears, 1 for almost everything else
     [:equipped_weapon_type,   :int8], #0=no weapon or monster weapon, rest are in same order as WeaponMastery struct
@@ -110,6 +110,10 @@ class Character < BaseData
     :face   => 'jpg',
     :sprite => 'png'
   }
+  
+  def self.valid_characters(characters = [])
+    characters.select { |character| character.magic_number != 0 }
+  end
   
   def self.image_path(image_type,class_name,rank_id = 0)
     path = ['images','characters']
