@@ -1,6 +1,7 @@
 %li[character]
   %table.character
     %tr.names
+      %td{:rowspan => 3}= image_tag(character.image_path(:sprite))
       %td== #{cs character.name} / #{cs character.class_name}
     %tr
       %td.stats= render character.stats
@@ -8,3 +9,4 @@
         %ul= render character.items
     %tr
       %td= link_to 'Edit', edit_character_path(character)
+      

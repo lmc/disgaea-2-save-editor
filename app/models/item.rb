@@ -2,9 +2,9 @@ class Item < BaseData
   include Structure
   attr_accessor :parent_position #so we know where we sit in the characters array
   
-  #SIZE = 256
-  #7224 = start of name
-  #7296 = end of item?
+  #TO FIND:
+  #item world bills passed
+  #item world bill attempts (max 3)
   
   structure(
     [:specialists,          [Specialist,8]],
@@ -23,7 +23,6 @@ class Item < BaseData
     [:unknown05,            [:unknown,5]], #4 = lover spawn counter? 5 = lover spawned?
     [:rarity,               :int8],
     
-    #range? critical chance (fists are higher i think)?
     [:unknown06,            [:unknown,2]], #1 = (0x2 + 1), 2=weapon type? same values as WeaponMastery,7=red monster,21=blue monster
     [:population,           :int8],
     [:mv,                   :int8],
@@ -34,11 +33,11 @@ class Item < BaseData
     [:critical_chance,      :int8], #naturally lower for guns, higher for fists, red monster
     [:unknown11,            [:unknown,1]],
     [:rarity_badge,         :int8], #1=silver 'R', 2=gold 'L', 0=normal
-    [:unknown09,            [:unknown,18]], #seems to just be 00, maybe placeholder for DisgaeaString as below?
+    [:unknown09,            [:unknown,18]], #information on "More ATK" bills passed? Excalibur and Necronomicon both have #13 as 30 (3x 10, 3 bills passed?)
     #FIXME?: You can rename items in the Item World, will that make this become
     #  a DisgaeaString instead of String?
     [:name,                 [:string,33]], 
-    [:unknown10,            [:unknown,39]]
+    [:wtf_name,             [:disgaea_string,39]] #wtf, it has the name of (seemingly) random characters in here
   )
   
 end

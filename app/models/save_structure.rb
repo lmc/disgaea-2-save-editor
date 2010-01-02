@@ -1,6 +1,10 @@
 class SaveStructure < BaseData
   include Structure
   structure_root!
+  #TO FIND
+  #treasure maps
+  #land of carnage unlocked
+  #dark record/dark collection stats
   structure(
     [:header,           SaveHeader], #49
     [:unknown01,        [:unknown,2767]], #930..end = all 0

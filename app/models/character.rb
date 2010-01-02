@@ -104,5 +104,23 @@ class Character < BaseData
     57 => [:magic_knight,:dark_knight,:rune_knight],
     58 => [:exorcist,:diabolist]
   }
+  
+  IMAGE_TYPE_EXTENSIONS = {
+    :cut    => 'jpg',
+    :face   => 'jpg',
+    :sprite => 'png'
+  }
+  
+  def self.image_path(image_type,class_name,rank_id = 0)
+    path = ['images','characters']
+    class_name = CLASS_IDS[class_name] if class_name.is_a?(Numeric)
+    path << class_name << rank_id
+    path << "#{image_type.to_s}.#{IMAGE_TYPE_EXTENSIONS[image_type]}"
+    '/' + path.join('/')
+  end
+  
+  def image_path(image_type)
+    self.class.image_path(image_type,class_id,rank_colour)
+  end
 
 end
