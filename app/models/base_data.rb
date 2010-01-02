@@ -91,4 +91,8 @@ class BaseData
     values
   end
   
+  def self.parse_normal(file,klass,count)
+    self.new.parse_normal(file,klass,count)
+  end
+  
 end

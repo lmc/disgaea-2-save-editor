@@ -1,12 +1,13 @@
 %li[character]
   %table.character
     %tr.names
-      %td{:rowspan => 3}= image_tag(character.image_path(:sprite))
-      %td== #{cs character.name} / #{cs character.class_name}
+      %td{:rowspan => 3}= image_tag(Character.image_path(:sprite,character.class_id,character.rank_colour))
+      %td{:colspan => 4}== #{cs character.name} / #{cs character.class_name}
+    %tr.hp_sp
+      %th HP
+      %td= character.current_hp
+      %th SP
+      %td= character.current_sp
     %tr
-      %td.stats= render character.stats
-      %td.items
-        %ul= render character.items
-    %tr
-      %td= link_to 'Edit', edit_character_path(character)
+      %td{:colspan => 4}= link_to 'Edit', edit_character_path(character)
       

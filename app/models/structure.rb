@@ -82,6 +82,7 @@ module Structure
     
     def offset_for(struct_name,offset_in_array_struct = nil)
       position_of_struct = struct_order.index(struct_name)
+      raise "No known offset for #{struct_name}" unless position_of_struct
       offset = 0
       struct_order[0...position_of_struct].each do |i_struct_name|
         i_struct = structs[i_struct_name]

@@ -37,6 +37,14 @@ class LazyLoader
     struct[1]
   end
   
+  def each(&block)
+    puts "using each on "
+    size.times do |index|
+      yield(self[index])
+    end
+  end
+  include Enumerable
+  
   def to_param
     "#{offset}"
   end
@@ -59,8 +67,14 @@ class LazyLoader
       else
         new_struct = struct_class.structs[method]
       end
-      self.already_lazy[method] = LazyLoader.new(self,new_struct,new_offset)
-      self.already_lazy[method]
+      lazy_loader = LazyLoader.new(self,new_struct,new_offset)
+      unless method == :[]
+        self.already_lazy[method] = lazy_loader
+        self.already_lazy[method]
+      end
+      lazy_loader
+    elsif self.struct_class.struct_order.include?(method)
+      disassemble_single_attribute(method)
     else
       self.instance = disassemble
       parent_struct[self.offset] = self.instance #we're no longer lazy, since we've been disassembled
@@ -89,6 +103,17 @@ class LazyLoader
       instance.disassemble(file)
       instance
     end
+  end
+  
+  def disassemble_single_attribute(method)
+    start_pos = position_to_seek_to + self.struct_class.offset_for(method)
+    file = root_object.open
+    file.seek(start_pos)
+    
+    klass,count = *self.struct_class.structs[method]
+    values = BaseData.parse_normal(file,klass,count)
+    self.class.add_parent_struct(values,self)
+    values.respond_to?(:value) ? values.value : values
   end
   
   def parent_structs
