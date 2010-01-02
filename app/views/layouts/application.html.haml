@@ -9,4 +9,8 @@
       #flashes
         - flash.each_pair do |key,value|
           #flash{:id => key}= value
+    #save_storage_menu
+      - if current_save_storage
+        %p== Editing save id #{current_save_storage.id}
+      = link_to 'Edit a new save', save_storages_path
     = yield

@@ -5,6 +5,17 @@ class SaveStoragesController < InheritedResources::Base
     index!
   end
   
+  def make_active
+    @save_storage = resource
+    self.current_save_storage = @save_storage
+    flash[:success] = "Save ready for editing"
+    redirect_to characters_path
+  end
+  
+  def create
+    create! { redirect_to characters_path }
+  end
+  
   protected
   
   def build_resource

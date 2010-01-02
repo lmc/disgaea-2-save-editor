@@ -4,5 +4,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :characters,    :only => [:edit,:update,:index],
     :has_many => [:items,:weapon_skills]
     
-  map.resources :save_storages
+  map.resources :save_storages, :member => { :make_active => :post }
 end

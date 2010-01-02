@@ -3,7 +3,7 @@
 - @save_storages.each do |save_storage|
   %li
     = save_storage.updated_at.to_s(:short)
-    = link_to 'Edit'
+    = link_to 'Edit', make_active_save_storage_path(save_storage), :method => :post
 
 %h1 Add new save
 - semantic_form_for(@save_storage,:html => { :multipart => true }) do |f|
