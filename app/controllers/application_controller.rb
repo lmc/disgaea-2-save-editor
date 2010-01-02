@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
+  before_filter :initialize_session
+  
   def current_save
     @file = RAILS_ROOT+'/data/saves/ULUS10461DISGAEA000/SDDATA.BIN'
     @current_save ||= Save.new(@file)
@@ -16,6 +18,10 @@ class ApplicationController < ActionController::Base
   def current_disassembled
     @current_disassembled ||= current_save.structures
     @current_disassembled
+  end
+  
+  def initialize_session
+    session[:files] ||= []
   end
   
 end

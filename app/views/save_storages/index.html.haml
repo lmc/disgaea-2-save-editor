@@ -1,0 +1,14 @@
+%h1 Your saves
+%ul
+- @save_storages.each do |save_storage|
+  %li
+    = save_storage.updated_at.to_s(:short)
+    = link_to 'Edit'
+
+%h1 Add new save
+- semantic_form_for(@save_storage,:html => { :multipart => true }) do |f|
+  - f.inputs do
+    = f.file_field :save_file
+  - f.buttons do
+    = f.commit_button
+  
