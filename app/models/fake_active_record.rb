@@ -29,18 +29,17 @@ module FakeActiveRecord
       false
     end
     
-    def update_attributes(attributes = {})
+    def update_attributes(attributes = {},first_call = true)
       attributes.each_pair do |key,value|
         if value.is_a?(Hash)
-          send(key).update_attributes(value)
+          send(key).update_attributes(value,false)
         else
           assign_method = "#{key}="
           raise(ArgumentError, "No attribute setter #{assign_method}") unless respond_to?(assign_method)
           send(assign_method,value)
         end
       end
-      debugger
-      valid?
+      (first_call && self.lazy_loader.assemble) && valid?
     end
   end
 end

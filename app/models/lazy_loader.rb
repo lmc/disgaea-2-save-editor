@@ -77,6 +77,7 @@ class LazyLoader
       disassemble_single_attribute(method)
     else
       self.instance = disassemble
+      self.instance.lazy_loader = self #so we still know where we are in a disturbing display of breaking encapsulation
       parent_struct[self.offset] = self.instance #we're no longer lazy, since we've been disassembled
       send_on_instance(method,*args,&block)
     end
@@ -102,6 +103,13 @@ class LazyLoader
       instance = struct_class.new
       instance.disassemble(file)
       instance
+    end
+  end
+  
+  def assemble
+    root_object.open do |file|
+      file.seek(position_to_seek_to)
+      self.instance.assemble(file)
     end
   end
   

@@ -11,8 +11,12 @@ class Save < BaseData
     self.structures = LazyLoader.new(self,[SaveStructure,-1])
   end
   
-  def open
-    self.file = File.open(filename,'r')
+  def open(&block)
+    if block_given?
+      self.file = File.open(filename,'r+',&block)
+    else
+      self.file = File.open(filename,'r+')
+    end
   end
   
   def disassemble

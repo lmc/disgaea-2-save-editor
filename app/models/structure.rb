@@ -5,14 +5,11 @@ module Structure
       @struct_order ||= []
       @structs      ||= {}
       @structure_root = false
-      #@struct_start   = 0
-      #@struct_end     = 0
+      
       class << self
         attr_accessor :struct_order, :structs, :structure_root
       end
-      #attr_accessor :struct_start, :struct_end
-      
-      #TODO: Lazy loading
+      attr_accessor :lazy_loader
       
       def self.structure_root!
         self.structure_root = true
