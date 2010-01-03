@@ -5,7 +5,7 @@ RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 
 #Hack to get it to run on Dreamhost
 if `uname` =~ /Linux/
-  ENV['RAILS_ENV'] = 'production'
+  RAILS_ENV = 'production'
   ENV["GEM_HOME"]="/home/two55/.gems"
   ENV["GEM_PATH"]="/home/two55/.gems"
 end

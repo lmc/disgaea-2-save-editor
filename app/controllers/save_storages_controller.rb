@@ -15,6 +15,7 @@ class SaveStoragesController < InheritedResources::Base
   def create
     create! do
       self.current_save_storage = @save_storage
+      characters_path
     end
   end
   

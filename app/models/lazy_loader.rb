@@ -23,7 +23,9 @@ class LazyLoader
   end
   
   def lazy_method?(method)
-    (DEFAULT_LAZY_METHODS + struct_class.array_structs).include?(method)
+    structs_we_respond_to = []
+    structs_we_respond_to += struct_class.array_structs if struct_class.respond_to?(:array_structs)
+    (DEFAULT_LAZY_METHODS + structs_we_respond_to).include?(method)
   end
   
   def [](key)
@@ -73,7 +75,7 @@ class LazyLoader
         self.already_lazy[method]
       end
       lazy_loader
-    elsif self.struct_class.struct_order.include?(method)
+    elsif self.struct_class.respond_to?(:struct_order) && self.struct_class.struct_order.include?(method)
       disassemble_single_attribute(method)
     else
       self.instance = disassemble
