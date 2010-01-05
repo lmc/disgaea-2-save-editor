@@ -1,9 +1,8 @@
 %h1 Edit Character:
 - semantic_form_for @character do |f|
   - f.inputs do
-    = f.input :name, :input_html => { :class => 'long' }
-    = f.input :class_name, :input_html => { :class => 'long' }
-    -# experience/level (TODO: calculate level from exp)
+    = f.object.name
+    = f.object.class_name
     = f.input :experience
     = f.input :mana
     = f.input :felonies_total

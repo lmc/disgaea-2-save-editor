@@ -28,6 +28,8 @@ describe Character do
     disassembled.experience.should == 1469552283
   end
   
+  it "should calculate level from experience"
+  
   it "should extract items" do
     disassembled.should have(4).items
     disassembled.items[0].name.strip.should == 'Balmung'
@@ -91,6 +93,18 @@ describe Character do
     disassembled.stats.spd.should equal 25808
   end
   
+  it "should extract naked stats" do
+    disassembled.naked_stats_struct.should be_an_instance_of Stats
+    disassembled.naked_stats.hp.should == 10294
+    disassembled.naked_stats.sp.should == 3420
+    disassembled.naked_stats.atk.should == 10317
+    disassembled.naked_stats.def.should == 4553
+    disassembled.naked_stats.int.should == 4566
+    disassembled.naked_stats.res.should == 3418
+    disassembled.naked_stats.hit.should == 6837
+    disassembled.naked_stats.spd.should == 7402
+  end
+  
   it "should extract current hp and sp" do
     disassembled.current_hp.should == 48728
     disassembled.current_sp.should == 14822
@@ -109,6 +123,27 @@ describe Character do
   it "should extract displayed felonies" do
     disassembled.felonies_displayed_struct.should be_an_instance_of BaseData::Int16
     disassembled.felonies_displayed.should equal 99
+  end
+  
+  it "should extract jmp" do
+    disassembled.base_jmp_struct.should be_an_instance_of BaseData::Int8
+    disassembled.base_jmp.should == 20
+    disassembled.jmp_struct.should be_an_instance_of BaseData::Int8
+    disassembled.jmp.should == 45
+  end
+  
+  it "should extract mv" do
+    disassembled.base_mv_struct.should be_an_instance_of BaseData::Int8
+    disassembled.base_mv.should == 5
+    disassembled.mv_struct.should be_an_instance_of BaseData::Int8
+    disassembled.mv.should == 9
+  end
+  
+  it "should extract counter" do
+    disassembled.base_counter_struct.should be_an_instance_of BaseData::Int8
+    disassembled.base_counter.should == 2
+    disassembled.counter_struct.should be_an_instance_of BaseData::Int8
+    disassembled.counter.should == 2
   end
 
 end

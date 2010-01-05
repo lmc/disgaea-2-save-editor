@@ -1,7 +1,7 @@
 %h1 Edit Item:
 - semantic_form_for @item, :url => resource_path do |f|
   - f.inputs do
-    = f.input :name, :input_html => { :class => 'long' }
+    = f.object.name
     = f.input :item_rank
     = f.input :rarity
     

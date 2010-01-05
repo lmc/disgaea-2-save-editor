@@ -41,8 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: disgaea-2-save-editor_production
+  host: mysql.twofiftyfive.net
+  database: two55_disgaea_2_save_editor_production
   pool: 5
-  username: root
-  password: 
-  socket: /opt/local/var/run/mysql5/mysqld.sock
+  username: two55_disgaea_2
+  password: fger56nm
