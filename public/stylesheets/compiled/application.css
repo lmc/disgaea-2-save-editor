@@ -1,8 +1,0 @@
-/* line 1, ../sass/application.sass */
-table, th, td {
-  border-left: 1px #000 solid;
-  border-top: 1px #000 solid; }
-
-/* line 4, ../sass/application.sass */
-th, td {
-  margin: 0px; }
