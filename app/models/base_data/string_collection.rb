@@ -8,7 +8,7 @@ class BaseData::StringCollection < BaseData::Base
   end
   
   def value
-    strings.map(&:value).join
+    BaseData::PlainString.clean_value(strings.map(&:value).join)
   end
   
   def value=(new_value)

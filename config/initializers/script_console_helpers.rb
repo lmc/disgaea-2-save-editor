@@ -1,5 +1,8 @@
-def sve
-  Save.new.disassemble
+def sve(reload = false)
+  if reload || !@save
+    @save = Save.new.disassemble.structures
+  end
+  @save
 end
 
 def cs
