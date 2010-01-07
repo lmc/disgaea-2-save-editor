@@ -57,7 +57,7 @@ describe BaseData do
   
   it "should properly convert in disgaea strings" do
     BaseData::DisgaeaString.translate(BaseData::DisgaeaString.untranslate("Kyoko")).should == "Kyoko"
-    BaseData::DisgaeaString.translate(BaseData::DisgaeaString.untranslate("Characters -_")).should == "Characters -_"
+    BaseData::DisgaeaString.translate(BaseData::DisgaeaString.untranslate("Characters -")).should == "Characters -"
   end
   
 end

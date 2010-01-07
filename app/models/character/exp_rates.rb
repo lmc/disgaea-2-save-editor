@@ -33,4 +33,8 @@ class Character
     :rune_knight  => 5
   }
   DEFAULT_CHARACTER_EXP_RATE = 5
+  
+  def exp_rate
+    CHARACTER_EXP_RATES[class_symbol] || DEFAULT_CHARACTER_EXP_RATE
+  end
 end

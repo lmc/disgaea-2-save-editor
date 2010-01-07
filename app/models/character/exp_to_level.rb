@@ -1,7 +1,31 @@
+#All this is reverse-engineered from the calculator below
+#http://disgaea.gamexploiter.com/calcs/d2_enext.php
 class Character
   module ExpToLevel
   end
   
+  def self.sum_exp_for_level(level)
+    next_exps = []
+    level.times do |index|
+      next_exps << (BASE_EXP_NEXT_PER_LEVEL[index] || 0)
+    end
+    next_exps
+  end
+  
+  def base_exp
+    experience / exp_rate
+  end
+  
+  #FIXME: Needs to work on levels >= 255, possible off-by-one error?
+  def level
+    LEVELS_TO_EXP.keys.sort.each do |level|
+      exp = LEVELS_TO_EXP[level]
+      if exp >= base_exp
+        return level - 1
+      end
+    end
+    nil
+  end
   
   BASE_EXP_NEXT_PER_LEVEL = {
     1 => 3,
@@ -255,4 +279,13 @@ class Character
     249 => 75875,
     250 => 76179
   }
+  
+  LEVELS_TO_EXP = {}
+  total_exp = 0
+  BASE_EXP_NEXT_PER_LEVEL.keys.sort.each do |level|
+    next_exp = BASE_EXP_NEXT_PER_LEVEL[level]
+    LEVELS_TO_EXP[level] = total_exp
+    total_exp += next_exp
+  end
+
 end

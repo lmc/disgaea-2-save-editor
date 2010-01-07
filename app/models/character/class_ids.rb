@@ -32,4 +32,12 @@ class Character
     58 => :lady_samurai
   }
   
+  def self.class_id_to_symbol(class_id)
+    CLASS_IDS[class_id]
+  end
+  
+  def class_symbol
+    self.class.class_id_to_symbol(self.class_id)
+  end
+  
 end
