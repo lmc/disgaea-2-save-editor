@@ -19,17 +19,17 @@ class Character
           ( (level - 0.423) * 304.960 ).floor
         end
           
-        if (Level >= 2000) {Base_Enext = Math.floor((Level - 0.608) * (305.04))}
-(Level >= 1000 && Level <= 2000) {Base_Enext = Math.floor((Level - 0.597) * (305.038))}
-(Level >= 600 && Level <= 1000) {Base_Enext = Math.floor((Level - 0.514) * (305.01))}
-(Level >= 550 && Level <= 600) {Base_Enext = Math.floor((Level - 0.495) * (305.00))}
-(Level >= 450 && Level <= 550) {Base_Enext = Math.floor((Level - 0.423) * (304.96))}
-(Level >= 400 && Level <= 450) {Base_Enext = Math.floor((Level - 0.305) * (304.88))}
-(Level >= 350 && Level <= 400) {Base_Enext = Math.floor((Level - 0.200) * (304.80))}
-(Level >= 300 && Level <= 350) {Base_Enext = Math.floor((Level + 0.007) * (304.62))}
-(Level >= 280 && Level <= 300) {Base_Enext = Math.floor((Level + 0.273) * (304.35))}
-(Level >= 260 && Level <= 280) {Base_Enext = Math.floor((Level + 0.411) * (304.20))}
-(Level >= 250 && Level <= 260) {Base_Enext = Math.floor((Level + 0.754) * (303.80))}
+#        if (Level >= 2000) {Base_Enext = Math.floor((Level - 0.608) * (305.04))}
+#(Level >= 1000 && Level <= 2000) {Base_Enext = Math.floor((Level - 0.597) * (305.038))}
+#(Level >= 600 && Level <= 1000) {Base_Enext = Math.floor((Level - 0.514) * (305.01))}
+#(Level >= 550 && Level <= 600) {Base_Enext = Math.floor((Level - 0.495) * (305.00))}
+#(Level >= 450 && Level <= 550) {Base_Enext = Math.floor((Level - 0.423) * (304.96))}
+#(Level >= 400 && Level <= 450) {Base_Enext = Math.floor((Level - 0.305) * (304.88))}
+#(Level >= 350 && Level <= 400) {Base_Enext = Math.floor((Level - 0.200) * (304.80))}
+#(Level >= 300 && Level <= 350) {Base_Enext = Math.floor((Level + 0.007) * (304.62))}
+#(Level >= 280 && Level <= 300) {Base_Enext = Math.floor((Level + 0.273) * (304.35))}
+#(Level >= 260 && Level <= 280) {Base_Enext = Math.floor((Level + 0.411) * (304.20))}
+#(Level >= 250 && Level <= 260) {Base_Enext = Math.floor((Level + 0.754) * (303.80))}
         
       end
     end
