@@ -2,14 +2,41 @@
 #http://disgaea.gamexploiter.com/calcs/d2_enext.php
 class Character
   module ExpToLevel
-  end
-  
-  def self.sum_exp_for_level(level)
-    next_exps = []
-    level.times do |index|
-      next_exps << (BASE_EXP_NEXT_PER_LEVEL[index] || 0)
+    
+    module ClassMethods
+      def base_exp_next_for_level(level)
+        level = level.to_f
+        case level
+        when 2000..9999
+          ( (level - 0.608) * 305.040 ).floor
+        when 1000...2000
+          ( (level - 0.597) * 305.038 ).floor
+        when 600...1000
+          ( (level - 0.514) * 305.010 ).floor
+        when 550...600
+          ( (level - 0.495) * 305.000 ).floor
+        when 450...550
+          ( (level - 0.423) * 304.960 ).floor
+        end
+          
+        if (Level >= 2000) {Base_Enext = Math.floor((Level - 0.608) * (305.04))}
+(Level >= 1000 && Level <= 2000) {Base_Enext = Math.floor((Level - 0.597) * (305.038))}
+(Level >= 600 && Level <= 1000) {Base_Enext = Math.floor((Level - 0.514) * (305.01))}
+(Level >= 550 && Level <= 600) {Base_Enext = Math.floor((Level - 0.495) * (305.00))}
+(Level >= 450 && Level <= 550) {Base_Enext = Math.floor((Level - 0.423) * (304.96))}
+(Level >= 400 && Level <= 450) {Base_Enext = Math.floor((Level - 0.305) * (304.88))}
+(Level >= 350 && Level <= 400) {Base_Enext = Math.floor((Level - 0.200) * (304.80))}
+(Level >= 300 && Level <= 350) {Base_Enext = Math.floor((Level + 0.007) * (304.62))}
+(Level >= 280 && Level <= 300) {Base_Enext = Math.floor((Level + 0.273) * (304.35))}
+(Level >= 260 && Level <= 280) {Base_Enext = Math.floor((Level + 0.411) * (304.20))}
+(Level >= 250 && Level <= 260) {Base_Enext = Math.floor((Level + 0.754) * (303.80))}
+        
+      end
     end
-    next_exps
+    
+    module InstanceMethods
+      
+    end
   end
   
   def base_exp
