@@ -9,6 +9,7 @@
       #flashes
         - flash.each_pair do |key,value|
           #flash{:id => key}= value
+    = render 'shared/navigation'
     #save_storage_menu
       - if current_save_storage
         %p== Editing save id #{current_save_storage.id}

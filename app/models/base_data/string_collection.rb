@@ -10,8 +10,8 @@ class BaseData::StringCollection < BaseData::Base
   end
   
   def value
-    #BaseData::PlainString.clean_value(self.strings.map(&:value).join)
-    self.strings.map(&:value).join
+    BaseData::PlainString.clean_value(self.strings.map(&:value).join)
+    #self.strings.map(&:value).join
   end
   
   #TODO: This only works for plain strings, disgaea strings need their own

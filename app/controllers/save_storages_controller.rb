@@ -19,6 +19,12 @@ class SaveStoragesController < InheritedResources::Base
     end
   end
   
+  def show
+    @save_storage = resource
+    send_file @save_storage.save_file.path, :type => "application/octet-stream",
+      :x_sendfile => true
+    end
+  
   protected
   
   def build_resource

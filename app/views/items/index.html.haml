@@ -1,0 +1,5 @@
+%h1 Items
+
+%ul
+  - @items.each do |item|
+    %li= link_to item.name, edit_item_path(item,:items_from => @items_from)

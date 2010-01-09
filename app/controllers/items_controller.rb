@@ -13,7 +13,15 @@ class ItemsController < InheritedResources::Base
     @items ||= if parent
         parent.items
       else
-        raise "handle this too"
+        @items_from = params[:items_from] || :pack
+        case @items_from.to_sym
+        when :pack
+          current_disassembled.pack_items
+        when :warehouse
+          current_disassembled.warehouse_items
+        when :wtf
+          current_disassembled.wtf_items
+        end
       end
     @items
   end
@@ -23,7 +31,7 @@ class ItemsController < InheritedResources::Base
     @parent ||= if params[:character_id]
         current_disassembled.characters[params[:character_id]]
       else
-        raise "handle this"
+        nil
       end
     @parent
   end

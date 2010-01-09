@@ -1,0 +1,26 @@
+%h1 Maps
+
+%table
+  %tr
+    %th Map ID
+    %th Cleared Count
+    %th Killed Count
+    %th Bonus Rank
+    %th Un 01
+    %th Un 02
+    %th Un 03
+    %th Un 04
+    %th Un 05
+    %th Un 06
+  - @maps.each do |map|
+    %tr
+      %td= map.map_id
+      %td= map.times_cleared
+      %td= map.killed
+      %td= map.bonus_rank
+      %td= map.unknown01
+      %td= map.unknown02
+      %td= map.unknown03
+      %td= map.unknown04
+      %td= map.unknown05
+      %td= map.unknown06
