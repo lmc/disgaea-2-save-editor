@@ -21,8 +21,7 @@ class SaveStoragesController < InheritedResources::Base
   
   def show
     @save_storage = resource
-    send_file @save_storage.save_file.path, :type => "application/octet-stream",
-      :x_sendfile => true
+    send_file @save_storage.save_file.path, :type => "application/octet-stream"
     end
   
   protected

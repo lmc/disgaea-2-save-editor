@@ -31,6 +31,7 @@ module FakeActiveRecord
     
     def update_attributes(attributes = {},first_call = true)
       attributes.each_pair do |key,value|
+        next if send(key).is_a?(BaseData::UnknownCollection)
         if value.is_a?(Hash)
           send(key).update_attributes(value,false)
         else

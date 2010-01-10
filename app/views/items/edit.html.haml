@@ -11,12 +11,11 @@
     = f.input :item_world_level
     
   - f.inputs :name => 'Class/Appearance' do |ff|
-    = f.input :item_class_id
+    = f.input :weapon_sprite_id
     = f.input :weapon_colour
     = f.input :rarity_badge
     
   - f.inputs :name => 'Misc.' do |ff|
-    = f.input :rarity
     = f.input :population
     = f.input :mv
     = f.input :jmp
@@ -30,9 +29,12 @@
   - f.inputs :name => 'Base stats', :for => [:base_stats,f.object.base_stats] do |ff|
     %p Stats without specialists, Item General bonuses, etc.
     = render 'stats/edit', :form => ff
-     
-  -# f.inputs :name => "Unknown values" do |ff|
-    =# unknown_fields_for(f)
+    
+  - begin
+    - f.inputs :name => "Unknown values" do |ff|
+      = unknown_fields_for(f)
+  - rescue #ugh ugly hack to stop things from breaking due to bugs with lazy loader
+    = ""
     
   - f.buttons do
     = f.commit_button

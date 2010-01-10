@@ -7,8 +7,8 @@ class Character
     1  => :adell,
     2  => :rozalin,
     
-    11 => :tink,
-    12 => :hanako,
+    12 => :tink,
+    11 => :hanako,
     
     26 => :raspberyl,
     

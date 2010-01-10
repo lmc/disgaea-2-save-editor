@@ -5,7 +5,8 @@ module ApplicationHelper
   end
   
   def unknown_field_for(form_builder,unknown_field_name)
-    unknown_values = form_builder.object.send(unknown_field_name).as_int8.join(', ')
+    unknown_values = form_builder.object.send(unknown_field_name).disassemble
+    unknown_values = BaseData::UnknownCollection.new(unknown_values).as_int8.join(', ')
     if unknown_values.size >= 50
       form_builder.input unknown_field_name, :as => :text, :input_html => { :value => unknown_values }
     elsif unknown_values.size >= 15

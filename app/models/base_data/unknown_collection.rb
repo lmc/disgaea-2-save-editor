@@ -2,6 +2,10 @@
 class BaseData::UnknownCollection < BaseData::StringCollection
   undef value #HACK
   
+  def value=(new_values_string)
+    
+  end
+  
   def inspect_value
     "size=#{size}"
   end

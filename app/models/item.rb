@@ -5,6 +5,9 @@ class Item < BaseData
   #TO FIND:
   #item world bills passed
   #item world bill attempts (max 3)
+  #lover spawn counter
+  #lover has spawned
+  #what character to load as lover specialists (maybe related to :wtf_name ?)
   
   structure(
     [:specialists,          [Specialist,8]],
@@ -13,7 +16,7 @@ class Item < BaseData
     [:base_stats,           Stats],
     [:item_class_id,        :int16],
     [:unknown02,            [:unknown,1]], #only on human weapons
-    [:icon_id,              :int8], #TODO: Test and document icon ids
+    [:weapon_sprite_id,     :int8], #TODO: NOT icon id, only used on weapons. something to do with graphics?
     [:level,                :int8], #true, effective level
     [:item_world_level_max, :int8],
     [:unknown03,            [:unknown,2]], #all 0
@@ -127,7 +130,7 @@ class Item < BaseData
     
     #emblems
     1901 => :imperial_seal,
-    1909 => :exodus
+    1909 => :exodus,
     
     #hp items
     2008 => :eclair,
@@ -161,6 +164,23 @@ class Item < BaseData
     2301 => :cell_phone, #TODO: Find out types
     
     2401 => :subpoena
+  }
+  
+  WEAPON_SPRITE_IDS = {
+    13 => :sword,
+    14 => :special_sword, #? also used for daimyo spear
+    
+    15 => :spear,
+    
+    16 => :bow,
+    17 => :special_bow,
+    
+    18 => :gun,
+    
+    19 => :axe,
+    20 => :axe,
+    
+    35 => :fist
   }
   
 end

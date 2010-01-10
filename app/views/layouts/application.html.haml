@@ -12,6 +12,20 @@
     = render 'shared/navigation'
     #save_storage_menu
       - if current_save_storage
-        %p== Editing save id #{current_save_storage.id}
+        == Editing save id #{current_save_storage.id}
       = link_to 'Edit a new save', save_storages_path
+      - if current_save_storage
+        = link_to 'Download edited save', save_storage_path(current_save_storage)
     = yield
+  #footer
+    %hr
+    = link_to 'Source code', 'http://github.com/lmc/disgaea-2-save-editor/'
+    %pre
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+      OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+      HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+      WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+      OTHER DEALINGS IN THE SOFTWARE.

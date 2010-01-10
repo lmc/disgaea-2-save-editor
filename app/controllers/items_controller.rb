@@ -1,6 +1,10 @@
 class ItemsController < InheritedResources::Base
   belongs_to :character, :optional => true
-  actions :index, :edit
+  actions :index, :edit, :update
+  
+  def update
+    update! { edit_resource_path }
+  end
   
   protected
   

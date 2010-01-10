@@ -3,7 +3,7 @@
   - f.inputs do
     = f.object.name
     = f.object.class_name
-    = f.input :experience
+    = f.input :experience, :input_html => { :class => 'long' }
     = f.input :mana
     = f.input :felonies_total
     
@@ -44,6 +44,9 @@
     
   - f.inputs do
     %li= link_to 'Edit weapon skills', character_weapon_skills_path(f.object)
+    
+  - f.inputs :name => "Unknown values" do |ff|
+    = unknown_fields_for(f)
     
   - f.buttons do
     = f.commit_button

@@ -9,6 +9,7 @@ class BaseData::PlainString < BaseData::Base
   #TODO: Limit string lengths when re-assigned
   
   def self.clean_value(string)
-    string[0...(string.index("\000"))]
+    end_pos = string.index("\000") || string.size
+    string[0...end_pos]
   end
 end

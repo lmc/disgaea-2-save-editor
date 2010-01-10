@@ -19,7 +19,7 @@ class BaseData
   def assemble(file)
     self.class.struct_order.each do |struct_name|
       [self.struct_values[struct_name]].flatten.each do |struct_value|
-        #debugger unless struct_value
+        old_file_pos = file.pos
         unless struct_value.nil?
           struct_value.assemble(file)
         else
@@ -29,6 +29,8 @@ class BaseData
           klass.value = send(struct_name)
           klass.assemble(file)
         end
+        now_file_pos = file.pos
+        raise "#{struct_name} writing too much #{now_file_pos - old_file_pos}" if (now_file_pos - old_file_pos) > struct_size_for(struct_name)
       end
     end
     file
@@ -43,8 +45,9 @@ class BaseData
     end
   end
   
-  def struct_position
-    
+  def struct_size_for(struct_name)
+    length = self.class.structs[struct_name][1].abs
+    self.class.structs[struct_name][0].struct_size * length
   end
   
   def disassemble(file)
