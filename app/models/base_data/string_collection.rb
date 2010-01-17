@@ -12,7 +12,14 @@ class BaseData::StringCollection < BaseData::Base
   #SERIOUSLY DON'T FUCK WITH THIS BECAUSE OTHERWISE THINGS DON'T ASSEMBLE PROPERLY
   def value
     #BaseData::PlainString.clean_value(self.strings.map(&:value).join)
-    self.strings.map(&:value).join
+    string = self.strings.map(&:value).join
+    #string.metaclass.instance_eval do
+      def string.clean_value
+        BaseData::String.clean_value(self)
+      end
+    #end
+    #debugger
+    string
   end
   
   #TODO: This only works for plain strings, disgaea strings need their own

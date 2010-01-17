@@ -6,12 +6,14 @@ class Character < BaseData
   
   #Need to find:
   #reincarnation count
+  #  same class reincarnation count (you get bonus points after 10 reincarnations into the same class)
   #stored levels
   #lover effect level? (might be calculated 'live', instead of being stored)
+  #improved magichange turn count (get recent save, zetta has it enabled)
   structure(
     [:experience,             :uint64],
     [:items,                  [Item,4]],
-    [:name,                   [:disgaea_string,41]], #FIXME: Story characters seem to use a string-table id
+    [:name,                   [:disgaea_string,41]],
     [:class_name,             [:string,61]],
     [:tunknown,               [:unknown,138]],
     
@@ -75,6 +77,12 @@ class Character < BaseData
     1 => :male,
     2 => :female
   }
+  
+  def teacher
+    return nil if teacher_id == 255
+    raise "Can't seem to access parent_struct" unless parent_struct
+    parent_struct.find { |character| character.id_as_teacher == self.teacher_id }
+  end
   
   def self.valid_characters(characters = [])
     characters.select { |character| character.magic_number != 0 }
