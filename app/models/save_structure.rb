@@ -2,12 +2,16 @@ class SaveStructure < BaseData
   include Structure
   structure_root!
   #TO FIND
+  #dark world unlocked + maps cleared count (maps cleared count calculated from the maps struct?)
   #treasure maps
   #land of carnage unlocked
   #dark record/dark collection stats
+  #main character sprite index (or just adell/axel switch)
+  #adell/axel mode toggle
+  #overworld position/heading
   structure(
     [:header,           SaveHeader], #49
-    [:unknown01,        [:unknown,2767]], #930..end = all 0
+    [:unknown01,        [:unknown,2767]], #930..end = all 0, possibly nil values for human classes in unlocked_classes?
     [:unlocked_classes, [UnlockedClass,59]],
     [:characters,       [Character,128]], #3072 x 128
     [:senators,         [Senator,64]],

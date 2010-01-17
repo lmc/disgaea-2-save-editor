@@ -10,7 +10,7 @@ class Map < BaseData
     [:unknown02,   :int8], #cutscene id?
     [:unknown03,   :int16], #always 0
     [:unknown04,   :int16], #always 0
-    [:unknown05,   :int8], #is a dark world version?
+    [:unknown05,   :int8], #is a dark world version. higher than 1 for only like 2 DW maps, why?
     [:unknown06,   :int8] 
   )
   

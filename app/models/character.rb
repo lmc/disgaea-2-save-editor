@@ -53,7 +53,7 @@ class Character < BaseData
     [:flying_movement,        :int8], #whether character can pass through enemies when moving
     [:equipped_weapon_range,  :int8], #set higher intrinsically for some monsters, usually 5 for guns, 2 for spears, 1 for almost everything else
     [:equipped_weapon_type,   :int8], #0=no weapon or monster weapon, rest are in same order as WeaponMastery struct
-    [:unknown13,              [:unknown,1]], #maybe something to do with weapon graphics?
+    [:unknown13,              [:unknown,1]], #maybe something to do with weapon graphics? only on human characters with weapons, but identical for yukarin and miki so maybe not?
     [:class_id,               :int8], #whether a lady samurai, magic knight, etc.
     [:class_rank,             :int8], #what rank of class
     [:unknown06,              [:unknown,3]], #Last int8 = character name type? 1 = completely custom, 2 = randomly-selected name, 3 = storyline name?
@@ -63,7 +63,7 @@ class Character < BaseData
     [:class_id_unknown,       :int8], #something unique for each character class. initial string table id?
     [:unknown11,              [:unknown,14]],
     [:magichange_2,           :int8],
-    [:unknown10,              [:unknown,282]]
+    [:unknown10,              [:unknown,282]] #there's 2 more wtf mystery strings from 194-217 and 227-238
   )
   
   include ClassIds
