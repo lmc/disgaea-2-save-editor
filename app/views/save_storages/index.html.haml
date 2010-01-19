@@ -7,6 +7,12 @@
 
 %h1 Add new save
 - semantic_form_for(@save_storage,:html => { :multipart => true }) do |f|
+  %p
+    Choose the unencrypted
+    %em SDDATA.BIN 
+    from the numbered folders in
+    %em /PSP/SAVEPLAIN
+    \.
   - f.inputs do
     = f.file_field :save_file
   - f.buttons do

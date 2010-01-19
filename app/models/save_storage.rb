@@ -1,6 +1,7 @@
 class SaveStorage < ActiveRecord::Base
   has_attached_file :save_file, :styles => { }
   attr_accessible :save_file
+  validate :validate
   
   def validate_disgaea_save
     unless right_filesize? && sensible_header? && sensible_name?

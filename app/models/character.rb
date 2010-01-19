@@ -10,6 +10,8 @@ class Character < BaseData
   #stored levels
   #lover effect level? (might be calculated 'live', instead of being stored)
   #improved magichange turn count (get recent save, zetta has it enabled)
+  #what character-related felonies have been claimed, this reincarnation
+  # high X, too high X, way too X, too many murders, etc.
   structure(
     [:experience,             :uint64],
     [:items,                  [Item,4]],

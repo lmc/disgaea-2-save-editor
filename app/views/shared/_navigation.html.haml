@@ -1,6 +1,7 @@
 %ul#navigation
   %li= link_to 'Save home', save_storages_path
   %li= link_to 'Characters', characters_path
-  %li= link_to 'Items'
+  %li= link_to 'Pack Items', items_path(:items_from => 'pack')
+  %li= link_to 'Warehouse Items', items_path(:items_from => 'warehouse')
   %li= link_to 'Unlocked classes', unlocked_classes_path
   %li= link_to 'Unlocked maps', maps_path

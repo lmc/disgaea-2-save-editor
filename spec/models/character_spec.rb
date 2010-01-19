@@ -19,8 +19,18 @@ describe Character do
   it "should assemble" do
     @output = ""
     assembled = disassembled.assemble(@output)
-    assembled.should == @file.tap { |f| f.rewind }.read
+    #we have this really weird thing related to the fact the game doesn't clear out strings in saves
+    #even though the assembled file is perfectly usable, it's not byte-for-byte identical
+    #so we'll assemble and disassemble it twice
+    @output = ""
+    assembled = String.new(assembled)
+    chr = Character.new.disassemble("#{assembled}")
+    #debugger
+    
+    assembled = chr.assemble(@output)
+    
     assembled.size.should == 3072
+    assembled.should == @file.tap { |f| f.rewind }.read
   end
   
   it "should extract experience" do
