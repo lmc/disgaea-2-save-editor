@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root      :controller => 'index'
+  map.root      :controller => 'save_storages'
   
   map.resource  :save_headers,  :only => [:edit,:update]
   

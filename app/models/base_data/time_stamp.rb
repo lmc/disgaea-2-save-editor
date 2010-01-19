@@ -12,6 +12,10 @@ class BaseData::TimeStamp < BaseData::Base
     self.seconds = raw[3]
   end
   
+  def in_seconds
+    (self.hours * 60 * 60) + (self.minutes * 60) + self.seconds
+  end
+  
   def as_raw
     [[self.hours].pack('s'),self.minutes.chr,self.seconds.chr].join('')
   end
