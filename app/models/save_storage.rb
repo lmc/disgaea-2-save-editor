@@ -1,7 +1,7 @@
 class SaveStorage < ActiveRecord::Base
   has_attached_file :save_file, :styles => { }
   attr_accessible :save_file
-  validate :validate
+  validate :validate_disgaea_save
   
   def validate_disgaea_save
     unless right_filesize? && sensible_header? && sensible_name?
@@ -10,7 +10,7 @@ class SaveStorage < ActiveRecord::Base
   end
   
   def right_filesize?
-    File.size(save_file.path) == SaveStructure.struct_size
+    File.size(save_file_path) == SaveStructure.struct_size
   end
   
   def sensible_timestamp?
@@ -27,8 +27,13 @@ class SaveStorage < ActiveRecord::Base
   
   def header
     header = SaveHeader.new
-    header.disassemble(File.new(save_file.path))
+    header.disassemble(File.new(save_file_path))
     header
+  end
+  
+  #I hate you paperclip I should have stuck with attachment_fu
+  def save_file_path
+    new_record? ? save_file.to_file.path : save_file.path
   end
   
 end

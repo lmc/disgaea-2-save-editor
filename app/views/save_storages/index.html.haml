@@ -1,6 +1,6 @@
 %h1 Your saves
 %ul
-- @save_storages.each do |save_storage|
+- (@save_storages || []).each do |save_storage|
   %li
     = save_storage.updated_at.to_s(:short)
     = link_to 'Edit', make_active_save_storage_path(save_storage), :method => :post
@@ -13,6 +13,7 @@
     from the numbered folders in
     %em /PSP/SAVEPLAIN
     \.
+  = f.error_messages
   - f.inputs do
     = f.file_field :save_file
   - f.buttons do

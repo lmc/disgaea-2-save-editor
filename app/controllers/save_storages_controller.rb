@@ -13,9 +13,14 @@ class SaveStoragesController < InheritedResources::Base
   end
   
   def create
-    create! do
-      self.current_save_storage = @save_storage
-      characters_path
+    create! do |success,failure|
+      success.html do
+        self.current_save_storage = @save_storage
+        characters_path
+      end
+      failure.html do
+        render :action => 'index'
+      end
     end
   end
   
