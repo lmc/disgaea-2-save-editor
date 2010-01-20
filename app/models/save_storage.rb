@@ -4,7 +4,7 @@ class SaveStorage < ActiveRecord::Base
   validate :validate_disgaea_save
   
   def validate_disgaea_save
-    unless right_filesize? && sensible_header? && sensible_name?
+    unless right_filesize? && sensible_timestamp? && sensible_name?
       errors.add(:uploaded_data,"doesn't seem to be an unencrypted, North American Disgaea 2 save")
     end
   end

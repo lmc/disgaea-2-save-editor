@@ -1,5 +1,12 @@
 %h1 Items
 
-%ul
+%table
   - @items.each do |item|
-    %li= link_to item.name, edit_item_path(item,:items_from => @items_from)
+    %tr
+      %td= link_to item.name.cds, edit_item_path(item,:items_from => @items_from)
+      /
+        %td
+          - semantic_form_for(item,:url => duplicate_item_path(item),:html => {:method => :post}) do |f|
+            Duplicate to slot:
+            = select(item,:slot_to_duplicate_to,(0...(@items.size)).to_a)
+            = f.submit 'Duplicate'
